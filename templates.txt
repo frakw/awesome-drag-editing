@@ -1,0 +1,6 @@
+### the paper name
+[conference/journal name]\
+**Authors:** 
+<details open>
+<summary>Abstract</summary>
+</details>
