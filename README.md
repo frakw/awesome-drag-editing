@@ -48,6 +48,7 @@ FastDrag: Manipulate Anything in One Step
 InstantDrag: Improving Interactivity in Drag-based Image Editing
 EasyDrag: Efficient Point-based Manipulation on Diffusion Models
 Diffeditor: Boosting accuracy and flexibility on diffusion-based image editing
+Readout Guidance: Learning Control from Diffusion Features
 ## Novel View Perspective
 RegionDrag: Fast Region-Based Image Editing with Diffusion Models
 ## Novel View Application
