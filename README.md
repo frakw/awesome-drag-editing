@@ -122,6 +122,7 @@ Point-based image editing has attracted remarkable attention since the emergence
 [![arXiv](https://img.shields.io/badge/arXiv-2404.01050-b31b1b.svg)](https://arxiv.org/abs/2404.01050) 
 [![GitHub stars](https://img.shields.io/github/stars/haofengl/DragNoise?logo=github&label=Stars)](https://github.com/haofengl/DragNoise)
 [![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://vcai.mpi-inf.mpg.de/projects/DragGAN/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/DragNoise.pdf) 
 \
 2024-04-01\
 **Authors:** Haofeng Liu, Chenshu Xu, Yifei Yang, Lihua Zeng, Shengfeng He
@@ -138,6 +139,7 @@ Point-based interactive editing serves as an essential tool to complement the co
 ![Publication](https://img.shields.io/badge/2024-NeurIPS-43aa8b) 
 [![arXiv](https://img.shields.io/badge/arXiv-2406.00432-b31b1b.svg)](https://arxiv.org/abs/2406.00432) 
 [![GitHub stars](https://img.shields.io/github/stars/cuixing100876/LucidDrag-NeurIPS2024?logo=github&label=Stars)](https://github.com/cuixing100876/LucidDrag-NeurIPS2024)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/LucidDrag.pdf) 
 \
 2024-06-01\
 **Authors:** Xing Cui, Peipei Li, Zekun Li, Xuannan Liu, Yueying Zou, Zhaofeng He
@@ -169,11 +171,74 @@ Large-scale Text-to-Image (T2I) diffusion models have revolutionized image gener
 
 ---
 
+### EasyDrag: Efficient Point-based Manipulation on Diffusion Models
+![Publication](https://img.shields.io/badge/2024-CVPR-43aa8b) 
+[![GitHub stars](https://img.shields.io/github/stars/Ace-Pegasus/EasyDrag?logo=github&label=Stars)](https://github.com/Ace-Pegasus/EasyDrag)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/EasyDrag.pdf) 
+\
+2024-03-20\
+**Authors:** Hou, Xingzhong and Liu, Boxiao and Zhang, Yi and Liu, Jihao and Liu, Yu and You, Haihang
+<details span>
+<summary>Abstract</summary>
+Generative models are gaining increasing popularity, and the demand for precisely generating images is on the rise. However, generating an image that perfectly aligns with users’ expectations is extremely challenging. The shapes of objects, the poses of animals, the structures of landscapes, and more may not match the user’s desires, and this applies to real images as well. This is where point- based image editing becomes essential. An excellent im- age editing method needs to meet the following criteria: user-friendly interaction, high performance, and good gen- eralization capability. Due to the limitations of StyleGAN, DragGAN exhibits limited robustness across diverse sce- narios, while DragDiffusion lacks user-friendliness due to the necessity of LoRA fine-tuning and masks. In this paper, we introduce a novel interactive point-based image edit- ing framework, called EasyDrag, that leverages pretrained diffusion models to achieve high-quality editing outcomes and user-friendship. Extensive experimentation demon- strates that our approach surpasses DragDiffusion in terms of both image quality and editing precision for point-based image manipulation tasks.
 
-EasyDrag: Efficient Point-based Manipulation on Diffusion Models
-LightningDrag: Lightning Fast and Accurate Drag-based Image Editing Emerging from Videos
-FastDrag: Manipulate Anything in One Step
-InstantDrag: Improving Interactivity in Drag-based Image Editing
+![EasyDrag](./imgs/EasyDrag.png)
+</details>
+
+---
+
+### LightningDrag: Lightning Fast and Accurate Drag-based Image Editing Emerging from Videos
+![Publication](https://img.shields.io/badge/2024-CVPR-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2405.13722-b31b1b.svg)](https://arxiv.org/abs/2405.13722) 
+[![GitHub stars](https://img.shields.io/github/stars/magic-research/LightningDrag?logo=github&label=Stars)](https://github.com/magic-research/LightningDrag)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://lightning-drag.github.io/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/LightningDrag.pdf) 
+\
+2024-05-22\
+**Authors:** Yujun Shi, Jun Hao Liew, Hanshu Yan, Vincent Y. F. Tan, Jiashi Feng
+<details span>
+<summary>Abstract</summary>
+Accuracy and speed are critical in image editing tasks. Pan et al. introduced a drag-based image editing framework that achieves pixel-level control using Generative Adversarial Networks (GANs). A flurry of subsequent studies enhanced this framework's generality by leveraging large-scale diffusion models. However, these methods often suffer from inordinately long processing times (exceeding 1 minute per edit) and low success rates. Addressing these issues head on, we present LightningDrag, a rapid approach enabling high quality drag-based image editing in ~1 second. Unlike most previous methods, we redefine drag-based editing as a conditional generation task, eliminating the need for time-consuming latent optimization or gradient-based guidance during inference. In addition, the design of our pipeline allows us to train our model on large-scale paired video frames, which contain rich motion information such as object translations, changing poses and orientations, zooming in and out, etc. By learning from videos, our approach can significantly outperform previous methods in terms of accuracy and consistency. Despite being trained solely on videos, our model generalizes well to perform local shape deformations not presented in the training data (e.g., lengthening of hair, twisting rainbows, etc.). Extensive qualitative and quantitative evaluations on benchmark datasets corroborate the superiority of our approach. 
+
+![LightningDrag](./imgs/LightningDrag.png)
+</details>
+
+---
+
+### FastDrag: Manipulate Anything in One Step
+![Publication](https://img.shields.io/badge/2024-NeurIPS-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2405.15769-b31b1b.svg)](https://arxiv.org/abs/2405.15769) 
+[![GitHub stars](https://img.shields.io/github/stars/XuanjiaZ/FastDrag?logo=github&label=Stars)](https://github.com/XuanjiaZ/FastDrag)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://fastdrag-site.github.io/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/FastDrag.pdf) 
+\
+2024-05-24\
+**Authors:** Xuanjia Zhao, Jian Guan, Congyi Fan, Dongli Xu, Youtian Lin, Haiwei Pan, Pengming Feng
+<details span>
+<summary>Abstract</summary>
+Drag-based image editing using generative models provides precise control over image contents, enabling users to manipulate anything in an image with a few clicks. However, prevailing methods typically adopt n-step iterations for latent semantic optimization to achieve drag-based image editing, which is time-consuming and limits practical applications. In this paper, we introduce a novel one-step drag-based image editing method, i.e., FastDrag, to accelerate the editing process. Central to our approach is a latent warpage function (LWF), which simulates the behavior of a stretched material to adjust the location of individual pixels within the latent space. This innovation achieves one-step latent semantic optimization and hence significantly promotes editing speeds. Meanwhile, null regions emerging after applying LWF are addressed by our proposed bilateral nearest neighbor interpolation (BNNI) strategy. This strategy interpolates these regions using similar features from neighboring areas, thus enhancing semantic integrity. Additionally, a consistency-preserving strategy is introduced to maintain the consistency between the edited and original images by adopting semantic information from the original image, saved as key and value pairs in self-attention module during diffusion inversion, to guide the diffusion sampling. Our FastDrag is validated on the DragBench dataset, demonstrating substantial improvements in processing time over existing methods, while achieving enhanced editing performance. 
+
+![FastDrag](./imgs/FastDrag.png)
+</details>
+
+---
+
+### InstantDrag: Improving Interactivity in Drag-based Image Editing
+![Publication](https://img.shields.io/badge/2024-SIGGRAPH_Asia-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2409.08857-b31b1b.svg)](https://arxiv.org/abs/2409.08857) 
+[![GitHub stars](https://img.shields.io/github/stars/SNU-VGILab/InstantDrag?logo=github&label=Stars)](https://github.com/SNU-VGILab/InstantDrag)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://joonghyuk.com/instantdrag-web/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/InstantDrag.pdf) 
+\
+YYYY-MM-DD\
+**Authors:** 
+<details span>
+<summary>Abstract</summary>
+
+
+![InstantDrag](./imgs/InstantDrag.png)
+</details>
+
 ## Novel View Perspective
 Readout Guidance: Learning Control from Diffusion Features
 RegionDrag: Fast Region-Based Image Editing with Diffusion Models
