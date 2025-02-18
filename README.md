@@ -16,6 +16,7 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2305.10973-b31b1b.svg)](https://arxiv.org/abs/2305.10973) 
 [![GitHub stars](https://img.shields.io/github/stars/XingangPan/DragGAN?logo=github&label=Stars)](https://github.com/XingangPan/DragGAN)
 [![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://vcai.mpi-inf.mpg.de/projects/DragGAN/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/DragGAN.pdf) 
 \
 2023-05-18\
 **Authors:** Xingang Pan, Ayush Tewari, Thomas Leimkühler, Lingjie Liu, Abhimitra Meka, Christian Theobalt
@@ -33,6 +34,7 @@ Synthesizing visual content that meets users' needs often requires flexible and 
 [![arXiv](https://img.shields.io/badge/arXiv-2306.14435-b31b1b.svg)](https://arxiv.org/abs/2306.14435) 
 [![GitHub stars](https://img.shields.io/github/stars/Yujun-Shi/DragDiffusion?logo=github&label=Stars)](https://github.com/Yujun-Shi/DragDiffusion)
 [![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://yujun-shi.github.io/projects/dragdiffusion.html)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/DragDiffusion.pdf) 
 \
 2023-06-26\
 **Authors:** Yujun Shi, Chuhui Xue, Jun Hao Liew, Jiachun Pan, Hanshu Yan, Wenqing Zhang
@@ -50,6 +52,7 @@ Precise and controllable image editing is a challenging task that has attracted 
 [![arXiv](https://img.shields.io/badge/arXiv-2307.02421-b31b1b.svg)](https://arxiv.org/abs/2307.02421) 
 [![GitHub stars](https://img.shields.io/github/stars/MC-E/DragonDiffusion?logo=github&label=Stars)](https://github.com/MC-E/DragonDiffusion)
 [![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://mc-e.github.io/project/DragonDiffusion/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/DragonDiffusion.pdf) 
 \
 2023-07-05\
 **Authors:** Chong Mou, Xintao Wang, Jiechong Song, Ying Shan, Jian Zhang
@@ -67,6 +70,7 @@ Despite the ability of existing large-scale text-to-image (T2I) models to genera
 [![arXiv](https://img.shields.io/badge/arXiv-2307.04684-b31b1b.svg)](https://arxiv.org/abs/2307.04684) 
 [![GitHub stars](https://img.shields.io/github/stars/LPengYang/FreeDrag?logo=github&label=Stars)](https://github.com/LPengYang/FreeDrag)
 [![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://lin-chen.site/projects/freedrag)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/FreeDrag.pdf) 
 \
 2023-07-10\
 **Authors:** Pengyang Ling, Lin Chen, Pan Zhang, Huaian Chen, Yi Jin, Jinjin Zheng
@@ -83,6 +87,7 @@ To serve the intricate and varied demands of image editing, precise and flexible
 [![arXiv](https://img.shields.io/badge/arXiv-2311.01410-b31b1b.svg)](https://arxiv.org/abs/2311.01410) 
 [![GitHub stars](https://img.shields.io/github/stars/ML-GSAI/SDE-Drag?logo=github&label=Stars)](https://github.com/ML-GSAI/SDE-Drag)
 [![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://ml-gsai.github.io/SDE-Drag-demo/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/SDE-Drag.pdf) 
 \
 2023-11-02\
 **Authors:** Shen Nie, Hanzhong Allan Guo, Cheng Lu, Yuhao Zhou, Chenyu Zheng, Chongxuan Li
@@ -99,6 +104,7 @@ We present a unified probabilistic formulation for diffusion-based image editing
 ![Publication](https://img.shields.io/badge/2024-ECCV-43aa8b) 
 [![arXiv](https://img.shields.io/badge/arXiv-2403.04437-b31b1b.svg)](https://arxiv.org/abs/2403.04437) 
 [![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://stabledrag.github.io/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/StableDrag.pdf) 
 \
 2024-03-07\
 **Authors:** Yutao Cui, Xiaotong Zhao, Guozhen Zhang, Shengming Cao, Kai Ma, Limin Wang
@@ -144,13 +150,32 @@ Flexible and accurate drag-based editing is a challenging task that has recently
 </details>
 
 ## Performance Improvement
+### Diffeditor: Boosting accuracy and flexibility on diffusion-based image editing
+![Publication](https://img.shields.io/badge/2024-CVPR-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2402.02583-b31b1b.svg)](https://arxiv.org/abs/2402.02583) 
+[![GitHub stars](https://img.shields.io/github/stars/MC-E/DragonDiffusion?logo=github&label=Stars)](https://github.com/MC-E/DragonDiffusion)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://mc-e.github.io/project/DragonDiffusion/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/DiffEditor.pdf) 
+\
+2024-02-04\
+**Authors:** Chong Mou, Xintao Wang, Jiechong Song, Ying Shan, Jian Zhang
+<details span>
+<summary>Abstract</summary>
+Large-scale Text-to-Image (T2I) diffusion models have revolutionized image generation over the last few years. Although owning diverse and high-quality generation capabilities, translating these abilities to fine-grained image editing remains challenging. In this paper, we propose DiffEditor to rectify two weaknesses in existing diffusion-based image editing: (1) in complex scenarios, editing results often lack editing accuracy and exhibit unexpected artifacts; (2) lack of flexibility to harmonize editing operations, e.g., imagine new content. In our solution, we introduce image prompts in fine-grained image editing, cooperating with the text prompt to better describe the editing content. To increase the flexibility while maintaining content consistency, we locally combine stochastic differential equation (SDE) into the ordinary differential equation (ODE) sampling. In addition, we incorporate regional score-based gradient guidance and a time travel strategy into the diffusion sampling, further improving the editing quality. Extensive experiments demonstrate that our method can efficiently achieve state-of-the-art performance on various fine-grained image editing tasks, including editing within a single image (e.g., object moving, resizing, and content dragging) and across images (e.g., appearance replacing and object pasting).
+
+
+![DiffEditor](./imgs/DiffEditor.png)
+</details>
+
+---
+
+
+EasyDrag: Efficient Point-based Manipulation on Diffusion Models
 LightningDrag: Lightning Fast and Accurate Drag-based Image Editing Emerging from Videos
 FastDrag: Manipulate Anything in One Step
 InstantDrag: Improving Interactivity in Drag-based Image Editing
-EasyDrag: Efficient Point-based Manipulation on Diffusion Models
-Diffeditor: Boosting accuracy and flexibility on diffusion-based image editing
-Readout Guidance: Learning Control from Diffusion Features
 ## Novel View Perspective
+Readout Guidance: Learning Control from Diffusion Features
 RegionDrag: Fast Region-Based Image Editing with Diffusion Models
 ## Novel View Application
 DragVideo: Interactive Drag-style Video Editing
