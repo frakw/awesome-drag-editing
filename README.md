@@ -135,6 +135,24 @@ Point-based interactive editing serves as an essential tool to complement the co
 
 ---
 
+### GoodDrag: Towards Good Practices for Drag Editing with Diffusion Models
+[![arXiv](https://img.shields.io/badge/arXiv-2404.07206-b31b1b.svg)](https://arxiv.org/abs/2404.07206) 
+[![GitHub stars](https://img.shields.io/github/stars/zewei-Zhang/GoodDrag?logo=github&label=Stars)](https://github.com/zewei-Zhang/GoodDrag)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://gooddrag.github.io/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/GoodDrag.pdf) 
+\
+2024-04-10\
+**Authors:** Zewei Zhang, Huan Liu, Jun Chen, Xiangyu Xu
+<details span>
+<summary>Abstract</summary>
+In this paper, we introduce GoodDrag, a novel approach to improve the stability and image quality of drag editing. Unlike existing methods that struggle with accumulated perturbations and often result in distortions, GoodDrag introduces an AlDD framework that alternates between drag and denoising operations within the diffusion process, effectively improving the fidelity of the result. We also propose an information-preserving motion supervision operation that maintains the original features of the starting point for precise manipulation and artifact reduction. In addition, we contribute to the benchmarking of drag editing by introducing a new dataset, Drag100, and developing dedicated quality assessment metrics, Dragging Accuracy Index and Gemini Score, utilizing Large Multimodal Models. Extensive experiments demonstrate that the proposed GoodDrag compares favorably against the state-of-the-art approaches both qualitatively and quantitatively.
+
+![GoodDrag](./imgs/GoodDrag.png)
+</details>
+
+---
+
+
 ### Localize, Understand, Collaborate: Semantic-Aware Dragging via Intention Reasoner
 ![Publication](https://img.shields.io/badge/2024-NeurIPS-43aa8b) 
 [![arXiv](https://img.shields.io/badge/arXiv-2406.00432-b31b1b.svg)](https://arxiv.org/abs/2406.00432) 
@@ -230,28 +248,134 @@ Drag-based image editing using generative models provides precise control over i
 [![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://joonghyuk.com/instantdrag-web/)
 [![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/InstantDrag.pdf) 
 \
-YYYY-MM-DD\
-**Authors:** 
+2024-09-13\
+**Authors:** Joonghyuk Shin, Daehyeon Choi, Jaesik Park
 <details span>
 <summary>Abstract</summary>
-
+Drag-based image editing has recently gained popularity for its interactivity and precision. However, despite the ability of text-to-image models to generate samples within a second, drag editing still lags behind due to the challenge of accurately reflecting user interaction while maintaining image content. Some existing approaches rely on computationally intensive per-image optimization or intricate guidance-based methods, requiring additional inputs such as masks for movable regions and text prompts, thereby compromising the interactivity of the editing process. We introduce InstantDrag, an optimization-free pipeline that enhances interactivity and speed, requiring only an image and a drag instruction as input. InstantDrag consists of two carefully designed networks: a drag-conditioned optical flow generator (FlowGen) and an optical flow-conditioned diffusion model (FlowDiffusion). InstantDrag learns motion dynamics for drag-based image editing in real-world video datasets by decomposing the task into motion generation and motion-conditioned image generation. We demonstrate InstantDrag's capability to perform fast, photo-realistic edits without masks or text prompts through experiments on facial video datasets and general scenes. These results highlight the efficiency of our approach in handling drag-based image editing, making it a promising solution for interactive, real-time applications.
 
 ![InstantDrag](./imgs/InstantDrag.png)
 </details>
 
 ## Novel View Perspective
-Readout Guidance: Learning Control from Diffusion Features
-RegionDrag: Fast Region-Based Image Editing with Diffusion Models
+
+### Readout Guidance: Learning Control from Diffusion Features
+![Publication](https://img.shields.io/badge/2024-CVPR-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2312.02150-b31b1b.svg)](https://arxiv.org/abs/2312.02150) 
+[![GitHub stars](https://img.shields.io/github/stars/google-research/readout_guidance?logo=github&label=Stars)](https://github.com/google-research/readout_guidance)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://readout-guidance.github.io/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/ReadoutGuidance.pdf) 
+\
+2023-12-04\
+**Authors:** Grace Luo, Trevor Darrell, Oliver Wang, Dan B Goldman, Aleksander Holynski
+<details span>
+<summary>Abstract</summary>
+We present Readout Guidance, a method for controlling text-to-image diffusion models with learned signals. Readout Guidance uses readout heads, lightweight networks trained to extract signals from the features of a pre-trained, frozen diffusion model at every timestep. These readouts can encode single-image properties, such as pose, depth, and edges; or higher-order properties that relate multiple images, such as correspondence and appearance similarity. Furthermore, by comparing the readout estimates to a user-defined target, and back-propagating the gradient through the readout head, these estimates can be used to guide the sampling process. Compared to prior methods for conditional generation, Readout Guidance requires significantly fewer added parameters and training samples, and offers a convenient and simple recipe for reproducing different forms of conditional control under a single framework, with a single architecture and sampling procedure. We showcase these benefits in the applications of drag-based manipulation, identity-consistent generation, and spatially aligned control.
+
+![ReadoutGuidance](./imgs/ReadoutGuidance.png)
+</details>
+
+---
+
+### RegionDrag: Fast Region-Based Image Editing with Diffusion Models
+![Publication](https://img.shields.io/badge/2024-ECCV-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2407.18247-b31b1b.svg)](https://arxiv.org/abs/2407.18247) 
+[![GitHub stars](https://img.shields.io/github/stars/Visual-AI/RegionDrag?logo=github&label=Stars)](https://github.com/Visual-AI/RegionDrag)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://visual-ai.github.io/regiondrag/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/RegionDrag.pdf) 
+\
+2024-07-25\
+**Authors:** Jingyi Lu, Xinghui Li, Kai Han
+<details span>
+<summary>Abstract</summary>
+Point-drag-based image editing methods, like DragDiffusion, have attracted significant attention. However, point-drag-based approaches suffer from computational overhead and misinterpretation of user intentions due to the sparsity of point-based editing instructions. In this paper, we propose a region-based copy-and-paste dragging method, RegionDrag, to overcome these limitations. RegionDrag allows users to express their editing instructions in the form of handle and target regions, enabling more precise control and alleviating ambiguity. In addition, region-based operations complete editing in one iteration and are much faster than point-drag-based methods. We also incorporate the attention-swapping technique for enhanced stability during editing. To validate our approach, we extend existing point-drag-based datasets with region-based dragging instructions. Experimental results demonstrate that RegionDrag outperforms existing point-drag-based approaches in terms of speed, accuracy, and alignment with user intentions. Remarkably, RegionDrag completes the edit on an image with a resolution of 512x512 in less than 2 seconds, which is more than 100x faster than DragDiffusion, while achieving better performance. 
+
+![RegionDrag](./imgs/RegionDrag.png)
+</details>
+
 ## Novel View Application
-DragVideo: Interactive Drag-style Video Editing
-Drag3D: DragGAN meets GET3D
-Edit One for All: Interactive Batch Image Editing
-Dragapart: Learning a part-level motion prior for articulated objects
+
+### DragVideo: Interactive Drag-style Video Editing
+![Publication](https://img.shields.io/badge/2024-ECCV-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2312.02216-b31b1b.svg)](https://arxiv.org/abs/2312.02216) 
+[![GitHub stars](https://img.shields.io/github/stars/RickySkywalker/DragVideo-Official?logo=github&label=Stars)](https://github.com/RickySkywalker/DragVideo-Official)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://dragvideo.github.io/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/DragVideo.pdf) 
+\
+2023-12-03\
+**Authors:** Yufan Deng, Ruida Wang, Yuhao Zhang, Yu-Wing Tai, Chi-Keung Tang
+<details span>
+<summary>Abstract</summary>
+Video generation models have shown their superior ability to generate photo-realistic video. However, how to accurately control (or edit) the video remains a formidable challenge. The main issues are: 1) how to perform direct and accurate user control in editing; 2) how to execute editings like changing shape, expression, and layout without unsightly distortion and artifacts to the edited content; and 3) how to maintain spatio-temporal consistency of video after editing. To address the above issues, we propose DragVideo, a general drag-style video editing framework. Inspired by DragGAN, DragVideo addresses issues 1) and 2) by proposing the drag-style video latent optimization method which gives desired control by updating noisy video latent according to drag instructions through video-level drag objective function. We amend issue 3) by integrating the video diffusion model with sample-specific LoRA and Mutual Self-Attention in DragVideo to ensure the edited result is spatio-temporally consistent. We also present a series of testing examples for drag-style video editing and conduct extensive experiments across a wide array of challenging editing tasks, such as motion, skeleton editing, etc, underscoring DragVideo can edit video in an intuitive, faithful to the user's intention manner, with nearly unnoticeable distortion and artifacts, while maintaining spatio-temporal consistency. While traditional prompt-based video editing fails to do the former two and directly applying image drag editing fails in the last, DragVideo's versatility and generality are emphasized.
+
+![DragVideo](./imgs/DragVideo.png)
+</details>
+
+---
+
+### Edit One for All: Interactive Batch Image Editing
+![Publication](https://img.shields.io/badge/2024-CVPR-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2401.10219-b31b1b.svg)](https://arxiv.org/abs/2401.10219) 
+[![GitHub stars](https://img.shields.io/github/stars/WisconsinAIVision/edit-one-for-all?logo=github&label=Stars)](https://github.com/WisconsinAIVision/edit-one-for-all)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://thaoshibe.github.io/edit-one-for-all/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/EditOneforAll.pdf) 
+\
+2024-01-18\
+**Authors:** 
+<details span>
+<summary>Abstract</summary>
+In recent years, image editing has advanced remarkably. With increased human control, it is now possible to edit an image in a plethora of ways; from specifying in text what we want to change, to straight up dragging the contents of the image in an interactive point-based manner. However, most of the focus has remained on editing single images at a time. Whether and how we can simultaneously edit large batches of images has remained understudied. With the goal of minimizing human supervision in the editing process, this paper presents a novel method for interactive batch image editing using StyleGAN as the medium. Given an edit specified by users in an example image (e.g., make the face frontal), our method can automatically transfer that edit to other test images, so that regardless of their initial state (pose), they all arrive at the same final state (e.g., all facing front). Extensive experiments demonstrate that edits performed using our method have similar visual quality to existing single-image-editing methods, while having more visual consistency and saving significant time and human effort.
+
+![EditOneforAll](./imgs/EditOneforAll.png)
+</details>
+
+---
+
+### Dragapart: Learning a part-level motion prior for articulated objects
+![Publication](https://img.shields.io/badge/2024-ECCV-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2403.15382-b31b1b.svg)](https://arxiv.org/abs/2403.15382) 
+[![GitHub stars](https://img.shields.io/github/stars/RuiningLi/DragAPart?logo=github&label=Stars)](https://github.com/RuiningLi/DragAPart)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://dragapart.github.io/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/DragAPart.pdf) 
+\
+2024-03-22\
+**Authors:** Ruining Li, Chuanxia Zheng, Christian Rupprecht, Andrea Vedaldi
+<details span>
+<summary>Abstract</summary>
+We introduce DragAPart, a method that, given an image and a set of drags as input, generates a new image of the same object that responds to the action of the drags. Differently from prior works that focused on repositioning objects, DragAPart predicts part-level interactions, such as opening and closing a drawer. We study this problem as a proxy for learning a generalist motion model, not restricted to a specific kinematic structure or object category. We start from a pre-trained image generator and fine-tune it on a new synthetic dataset, Drag-a-Move, which we introduce. Combined with a new encoding for the drags and dataset randomization, the model generalizes well to real images and different categories. Compared to prior motion-controlled generators, we demonstrate much better part-level motion understanding.
+
+![DragAPart](./imgs/DragAPart.png)
+</details>
+
+## 3D Drag Editing
+### Drag3D: DragGAN meets GET3D
+https://github.com/ashawkey/Drag3D
 ## Uncategory Papers
-GeoDiffuser: Geometry-Based Image Editing with Diffusion Models
-Move Anything with Layered Scene Diffusion
+
+### GeoDiffuser: Geometry-Based Image Editing with Diffusion Models
+[![arXiv](https://img.shields.io/badge/arXiv-2307.02421-b31b1b.svg)](https://arxiv.org/abs/2305.10973) 
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://ivl.cs.brown.edu/research/geodiffuser.html)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/GeoDiffuser.pdf) 
+\
+2024-04-22\
+**Authors:** Rahul Sajnani, Jeroen Vanbaar, Jie Min, Kapil Katyal, Srinath Sridhar
+<details span>
+<summary>Abstract</summary>
+The success of image generative models has enabled us to build methods that can edit images based on text or other user input. However, these methods are bespoke, imprecise, require additional information, or are limited to only 2D image edits. We present GeoDiffuser, a zero-shot optimization-based method that unifies common 2D and 3D image-based object editing capabilities into a single method. Our key insight is to view image editing operations as geometric transformations. We show that these transformations can be directly incorporated into the attention layers in diffusion models to implicitly perform editing operations. Our training-free optimization method uses an objective function that seeks to preserve object style but generate plausible images, for instance with accurate lighting and shadows. It also inpaints disoccluded parts of the image where the object was originally located. Given a natural image and user input, we segment the foreground object using SAM and estimate a corresponding transform which is used by our optimization approach for editing. GeoDiffuser can perform common 2D and 3D edits like object translation, 3D rotation, and removal. We present quantitative results, including a perceptual study, that shows how our approach is better than existing methods.
+
+![GeoDiffuser](./imgs/GeoDiffuser.png)
+</details>
+
 ## Datasets
-DragBench
+### DragBench
 https://github.com/Yujun-Shi/DragDiffusion/releases/tag/v0.1.1
+### Drag100
+https://drive.google.com/file/d/1qzUizzrSRd4bBaT-0bCYZr-MDpiKXjhW/view?usp=sharing
 ## Software & Tools
 ## Tutorials & Videos
+## Related Repositories
+* [Awesome-DragGAN](https://github.com/OpenGVLab/Awesome-DragGAN)
+* [Awesome Diffusion Categorized](https://github.com/wangkai930418/awesome-diffusion-categorized?tab=readme-ov-file#drag-edit)
+
+## Contact Info
+[contact@frakw.com](mailto:contact@frakw.com)
