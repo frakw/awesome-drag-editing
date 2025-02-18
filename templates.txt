@@ -1,5 +1,9 @@
 ### the paper name
-[conference/journal name]\
+![Publication](https://img.shields.io/badge/2024-CVPR-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2307.02421-b31b1b.svg)](https://arxiv.org/abs/2305.10973) 
+[![GitHub stars](https://img.shields.io/github/stars/XingangPan/DragGAN?logo=github&label=Stars)](https://github.com/XingangPan/DragGAN)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://vcai.mpi-inf.mpg.de/projects/DragGAN/)
+\
 YYYY-MM-DD\
 **Authors:** 
 <details span>

@@ -12,7 +12,11 @@
 - [Tutorials & Videos](#tutorials--videos)
 ## Seminal Papers
 ### Drag Your GAN: Interactive Point-based Manipulation on the Generative Image Manifold (DragGAN)
-[SIGGRAPH 2023]\
+![Publication](https://img.shields.io/badge/2023-SIGGRAPH-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2305.10973-b31b1b.svg)](https://arxiv.org/abs/2305.10973) 
+[![GitHub stars](https://img.shields.io/github/stars/XingangPan/DragGAN?logo=github&label=Stars)](https://github.com/XingangPan/DragGAN)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://vcai.mpi-inf.mpg.de/projects/DragGAN/)
+\
 2023-05-18\
 **Authors:** Xingang Pan, Ayush Tewari, Thomas Leimkühler, Lingjie Liu, Abhimitra Meka, Christian Theobalt
 <details span>
@@ -23,7 +27,11 @@ Synthesizing visual content that meets users' needs often requires flexible and 
 </details>
 
 ### DragDiffusion: Harnessing Diffusion Models for Interactive Point-based Image Editing
-[CVPR 2024]\
+![Publication](https://img.shields.io/badge/2024-CVPR-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2306.14435-b31b1b.svg)](https://arxiv.org/abs/2306.14435) 
+[![GitHub stars](https://img.shields.io/github/stars/Yujun-Shi/DragDiffusion?logo=github&label=Stars)](https://github.com/Yujun-Shi/DragDiffusion)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://yujun-shi.github.io/projects/dragdiffusion.html)
+\
 2023-06-26\
 **Authors:** Yujun Shi, Chuhui Xue, Jun Hao Liew, Jiachun Pan, Hanshu Yan, Wenqing Zhang
 <details span>
@@ -31,6 +39,21 @@ Synthesizing visual content that meets users' needs often requires flexible and 
 Precise and controllable image editing is a challenging task that has attracted significant attention. Recently, DragGAN enables an interactive point-based image editing framework and achieves impressive editing results with pixel-level precision. However, since this method is based on generative adversarial networks (GAN), its generality is upper-bounded by the capacity of the pre-trained GAN models. In this work, we extend such an editing framework to diffusion models and propose DragDiffusion. By leveraging large-scale pretrained diffusion models, we greatly improve the applicability of interactive point-based editing in real world scenarios. While most existing diffusion-based image editing methods work on text embeddings, DragDiffusion optimizes the diffusion latent to achieve precise spatial control. Although diffusion models generate images in an iterative manner, we empirically show that optimizing diffusion latent at one single step suffices to generate coherent results, enabling DragDiffusion to complete high-quality editing efficiently. Extensive experiments across a wide range of challenging cases (e.g., multi-objects, diverse object categories, various styles, etc.) demonstrate the versatility and generality of DragDiffusion.
 
 ![DragDiffusion](./imgs/DragDiffusion.png)
+</details>
+
+### DragonDiffusion: Enabling Drag-style Manipulation on Diffusion Models
+![Publication](https://img.shields.io/badge/2024-ICLR-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2307.02421-b31b1b.svg)](https://arxiv.org/abs/2307.02421) 
+[![GitHub stars](https://img.shields.io/github/stars/MC-E/DragonDiffusion?logo=github&label=Stars)](https://github.com/MC-E/DragonDiffusion)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://vcai.mpi-inf.mpg.de/projects/DragGAN/)
+\
+2023-07-05\
+**Authors:** Chong Mou, Xintao Wang, Jiechong Song, Ying Shan, Jian Zhang
+<details span>
+<summary>Abstract</summary>
+Despite the ability of existing large-scale text-to-image (T2I) models to generate high-quality images from detailed textual descriptions, they often lack the ability to precisely edit the generated or real images. In this paper, we propose a novel image editing method, DragonDiffusion, enabling Drag-style manipulation on Diffusion models. Specifically, we construct classifier guidance based on the strong correspondence of intermediate features in the diffusion model. It can transform the editing signals into gradients via feature correspondence loss to modify the intermediate representation of the diffusion model. Based on this guidance strategy, we also build a multi-scale guidance to consider both semantic and geometric alignment. Moreover, a cross-branch self-attention is added to maintain the consistency between the original image and the editing result. Our method, through an efficient design, achieves various editing modes for the generated or real images, such as object moving, object resizing, object appearance replacement, and content dragging. It is worth noting that all editing and content preservation signals come from the image itself, and the model does not require fine-tuning or additional modules.
+
+![DragonDiffusion](./imgs/DragonDiffusion.png)
 </details>
 
 ## Editing Result Improvement
