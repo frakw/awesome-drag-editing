@@ -366,13 +366,33 @@ The success of image generative models has enabled us to build methods that can 
 ![GeoDiffuser](./imgs/GeoDiffuser.png)
 </details>
 
+### Move Anything with Layered Scene Diffusion
+![Publication](https://img.shields.io/badge/2024-CVPR-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2404.07178-b31b1b.svg)](https://arxiv.org/abs/2404.07178)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://ai.meta.com/research/publications/move-anything-with-layered-scene-diffusion/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/MoveAnythingLayeredScene.pdf) 
+\
+2024-04-10\
+**Authors:** Jiawei Ren, Mengmeng Xu, Jui-Chieh Wu, Ziwei Liu, Tao Xiang, Antoine Toisoul
+<details span>
+<summary>Abstract</summary>
+Diffusion models generate images with an unprecedented level of quality, but how can we freely rearrange image layouts? Recent works generate controllable scenes via learning spatially disentangled latent codes, but these methods do not apply to diffusion models due to their fixed forward process. In this work, we propose SceneDiffusion to optimize a layered scene representation during the diffusion sampling process. Our key insight is that spatial disentanglement can be obtained by jointly denoising scene renderings at different spatial layouts. Our generated scenes support a wide range of spatial editing operations, including moving, resizing, cloning, and layer-wise appearance editing operations, including object restyling and replacing. Moreover, a scene can be generated conditioned on a reference image, thus enabling object moving for in-the-wild images. Notably, this approach is training-free, compatible with general text-to-image diffusion models, and responsive in less than a second.
+
+![MoveAnythingLayeredScene](./imgs/MoveAnythingLayeredScene.png)
+</details>
+
+---
+
+
 ## Datasets
 ### DragBench
 https://github.com/Yujun-Shi/DragDiffusion/releases/tag/v0.1.1
 ### Drag100
 https://drive.google.com/file/d/1qzUizzrSRd4bBaT-0bCYZr-MDpiKXjhW/view?usp=sharing
 ## Software & Tools
+comming soon...
 ## Tutorials & Videos
+comming soon...
 ## Related Repositories
 * [Awesome-DragGAN](https://github.com/OpenGVLab/Awesome-DragGAN)
 * [Awesome Diffusion Categorized](https://github.com/wangkai930418/awesome-diffusion-categorized?tab=readme-ov-file#drag-edit)
