@@ -8,4 +8,8 @@ YYYY-MM-DD\
 **Authors:** 
 <details span>
 <summary>Abstract</summary>
+
+![PaperTitle](./imgs/PaperTitle.png)
 </details>
+
+---

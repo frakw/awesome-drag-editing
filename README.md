@@ -26,6 +26,8 @@ Synthesizing visual content that meets users' needs often requires flexible and 
 ![DragGAN](./imgs/DragGAN.png)
 </details>
 
+---
+
 ### DragDiffusion: Harnessing Diffusion Models for Interactive Point-based Image Editing
 ![Publication](https://img.shields.io/badge/2024-CVPR-43aa8b) 
 [![arXiv](https://img.shields.io/badge/arXiv-2306.14435-b31b1b.svg)](https://arxiv.org/abs/2306.14435) 
@@ -41,11 +43,13 @@ Precise and controllable image editing is a challenging task that has attracted 
 ![DragDiffusion](./imgs/DragDiffusion.png)
 </details>
 
+---
+
 ### DragonDiffusion: Enabling Drag-style Manipulation on Diffusion Models
 ![Publication](https://img.shields.io/badge/2024-ICLR-43aa8b) 
 [![arXiv](https://img.shields.io/badge/arXiv-2307.02421-b31b1b.svg)](https://arxiv.org/abs/2307.02421) 
 [![GitHub stars](https://img.shields.io/github/stars/MC-E/DragonDiffusion?logo=github&label=Stars)](https://github.com/MC-E/DragonDiffusion)
-[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://vcai.mpi-inf.mpg.de/projects/DragGAN/)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://mc-e.github.io/project/DragonDiffusion/)
 \
 2023-07-05\
 **Authors:** Chong Mou, Xintao Wang, Jiechong Song, Ying Shan, Jian Zhang
@@ -57,14 +61,88 @@ Despite the ability of existing large-scale text-to-image (T2I) models to genera
 </details>
 
 ## Editing Result Improvement
-The Blessing of Randomness: SDE Beats ODE in General Diffusion-based Image Editing
-<br>
-Dragondiffusion: Enabling drag-style manipulation on diffusion models
-<br>
-Localize, Understand, Collaborate: Semantic-Aware Dragging via Intention Reasoner
-FreeDrag: Feature Dragging for Reliable Point-based Image Editing
-StableDrag: Stable Dragging for Point-based Image Editing
-Drag Your Noise: Interactive Point-based Editing via Diffusion Semantic Propagation
+
+### FreeDrag: Feature Dragging for Reliable Point-based Image Editing
+![Publication](https://img.shields.io/badge/2024-CVPR-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2307.04684-b31b1b.svg)](https://arxiv.org/abs/2307.04684) 
+[![GitHub stars](https://img.shields.io/github/stars/LPengYang/FreeDrag?logo=github&label=Stars)](https://github.com/LPengYang/FreeDrag)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://lin-chen.site/projects/freedrag)
+\
+2023-07-10\
+**Authors:** Pengyang Ling, Lin Chen, Pan Zhang, Huaian Chen, Yi Jin, Jinjin Zheng
+<details span>
+<summary>Abstract</summary>
+To serve the intricate and varied demands of image editing, precise and flexible manipulation in image content is indispensable. Recently, Drag-based editing methods have gained impressive performance. However, these methods predominantly center on point dragging, resulting in two noteworthy drawbacks, namely "miss tracking", where difficulties arise in accurately tracking the predetermined handle points, and "ambiguous tracking", where tracked points are potentially positioned in wrong regions that closely resemble the handle points. To address the above issues, we propose FreeDrag, a feature dragging methodology designed to free the burden on point tracking. The FreeDrag incorporates two key designs, i.e., template feature via adaptive updating and line search with backtracking, the former improves the stability against drastic content change by elaborately controls feature updating scale after each dragging, while the latter alleviates the misguidance from similar points by actively restricting the search area in a line. These two technologies together contribute to a more stable semantic dragging with higher efficiency. Comprehensive experimental results substantiate that our approach significantly outperforms pre-existing methodologies, offering reliable point-based editing even in various complex scenarios.
+
+![FreeDrag](./imgs/FreeDrag.png)
+</details>
+
+---
+### The Blessing of Randomness: SDE Beats ODE in General Diffusion-Based Image Editing (SDE-Drag)
+![Publication](https://img.shields.io/badge/2024-ICLR-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2311.01410-b31b1b.svg)](https://arxiv.org/abs/2311.01410) 
+[![GitHub stars](https://img.shields.io/github/stars/ML-GSAI/SDE-Drag?logo=github&label=Stars)](https://github.com/ML-GSAI/SDE-Drag)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://ml-gsai.github.io/SDE-Drag-demo/)
+\
+2023-11-02\
+**Authors:** Shen Nie, Hanzhong Allan Guo, Cheng Lu, Yuhao Zhou, Chenyu Zheng, Chongxuan Li
+<details span>
+<summary>Abstract</summary>
+We present a unified probabilistic formulation for diffusion-based image editing, where a latent variable is edited in a task-specific manner and generally deviates from the corresponding marginal distribution induced by the original stochastic or ordinary differential equation (SDE or ODE). Instead, it defines a corresponding SDE or ODE for editing. In the formulation, we prove that the Kullback-Leibler divergence between the marginal distributions of the two SDEs gradually decreases while that for the ODEs remains as the time approaches zero, which shows the promise of SDE in image editing. Inspired by it, we provide the SDE counterparts for widely used ODE baselines in various tasks including inpainting and image-to-image translation, where SDE shows a consistent and substantial improvement. Moreover, we propose SDE-Drag -- a simple yet effective method built upon the SDE formulation for point-based content dragging. We build a challenging benchmark (termed DragBench) with open-set natural, art, and AI-generated images for evaluation. A user study on DragBench indicates that SDE-Drag significantly outperforms our ODE baseline, existing diffusion-based methods, and the renowned DragGAN. Our results demonstrate the superiority and versatility of SDE in image editing and push the boundary of diffusion-based editing methods.
+
+![SDEDrag](./imgs/SDEDrag.png)
+</details>
+
+---
+
+### StableDrag: Stable Dragging for Point-based Image Editing
+![Publication](https://img.shields.io/badge/2024-ECCV-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2403.04437-b31b1b.svg)](https://arxiv.org/abs/2403.04437) 
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://stabledrag.github.io/)
+\
+2024-03-07\
+**Authors:** Yutao Cui, Xiaotong Zhao, Guozhen Zhang, Shengming Cao, Kai Ma, Limin Wang
+<details span>
+<summary>Abstract</summary>
+Point-based image editing has attracted remarkable attention since the emergence of DragGAN. Recently, DragDiffusion further pushes forward the generative quality via adapting this dragging technique to diffusion models. Despite these great success, this dragging scheme exhibits two major drawbacks, namely inaccurate point tracking and incomplete motion supervision, which may result in unsatisfactory dragging outcomes. To tackle these issues, we build a stable and precise drag-based editing framework, coined as StableDrag, by designing a discirminative point tracking method and a confidence-based latent enhancement strategy for motion supervision. The former allows us to precisely locate the updated handle points, thereby boosting the stability of long-range manipulation, while the latter is responsible for guaranteeing the optimized latent as high-quality as possible across all the manipulation steps. Thanks to these unique designs, we instantiate two types of image editing models including StableDrag-GAN and StableDrag-Diff, which attains more stable dragging performance, through extensive qualitative experiments and quantitative assessment on DragBench.
+
+![StableDrag](./imgs/StableDrag.png)
+</details>
+
+---
+
+### Drag Your Noise: Interactive Point-based Editing via Diffusion Semantic Propagation
+![Publication](https://img.shields.io/badge/2024-CVPR-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2404.01050-b31b1b.svg)](https://arxiv.org/abs/2404.01050) 
+[![GitHub stars](https://img.shields.io/github/stars/haofengl/DragNoise?logo=github&label=Stars)](https://github.com/haofengl/DragNoise)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://vcai.mpi-inf.mpg.de/projects/DragGAN/)
+\
+2024-04-01\
+**Authors:** Haofeng Liu, Chenshu Xu, Yifei Yang, Lihua Zeng, Shengfeng He
+<details span>
+<summary>Abstract</summary>
+Point-based interactive editing serves as an essential tool to complement the controllability of existing generative models. A concurrent work, DragDiffusion, updates the diffusion latent map in response to user inputs, causing global latent map alterations. This results in imprecise preservation of the original content and unsuccessful editing due to gradient vanishing. In contrast, we present DragNoise, offering robust and accelerated editing without retracing the latent map. The core rationale of DragNoise lies in utilizing the predicted noise output of each U-Net as a semantic editor. This approach is grounded in two critical observations: firstly, the bottleneck features of U-Net inherently possess semantically rich features ideal for interactive editing; secondly, high-level semantics, established early in the denoising process, show minimal variation in subsequent stages. Leveraging these insights, DragNoise edits diffusion semantics in a single denoising step and efficiently propagates these changes, ensuring stability and efficiency in diffusion editing. Comparative experiments reveal that DragNoise achieves superior control and semantic retention, reducing the optimization time by over 50% compared to DragDiffusion.
+
+![DragNoise](./imgs/DragNoise.png)
+</details>
+
+---
+
+### Localize, Understand, Collaborate: Semantic-Aware Dragging via Intention Reasoner
+![Publication](https://img.shields.io/badge/2024-NeurIPS-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2406.00432-b31b1b.svg)](https://arxiv.org/abs/2406.00432) 
+[![GitHub stars](https://img.shields.io/github/stars/cuixing100876/LucidDrag-NeurIPS2024?logo=github&label=Stars)](https://github.com/cuixing100876/LucidDrag-NeurIPS2024)
+\
+2024-06-01\
+**Authors:** Xing Cui, Peipei Li, Zekun Li, Xuannan Liu, Yueying Zou, Zhaofeng He
+<details span>
+<summary>Abstract</summary>
+Flexible and accurate drag-based editing is a challenging task that has recently garnered significant attention. Current methods typically model this problem as automatically learning "how to drag" through point dragging and often produce one deterministic estimation, which presents two key limitations: 1) Overlooking the inherently ill-posed nature of drag-based editing, where multiple results may correspond to a given input, as illustrated in Fig.1; 2) Ignoring the constraint of image quality, which may lead to unexpected distortion. To alleviate this, we propose LucidDrag, which shifts the focus from "how to drag" to "what-then-how" paradigm. LucidDrag comprises an intention reasoner and a collaborative guidance sampling mechanism. The former infers several optimal editing strategies, identifying what content and what semantic direction to be edited. Based on the former, the latter addresses "how to drag" by collaboratively integrating existing editing guidance with the newly proposed semantic guidance and quality guidance. Specifically, semantic guidance is derived by establishing a semantic editing direction based on reasoned intentions, while quality guidance is achieved through classifier guidance using an image fidelity discriminator. Both qualitative and quantitative comparisons demonstrate the superiority of LucidDrag over previous methods.
+
+
+![LucidDrag](./imgs/LucidDrag.png)
+</details>
+
 ## Performance Improvement
 LightningDrag: Lightning Fast and Accurate Drag-based Image Editing Emerging from Videos
 FastDrag: Manipulate Anything in One Step
