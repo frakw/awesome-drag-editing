@@ -524,6 +524,8 @@ Diffusion models generate images with an unprecedented level of quality, but how
 ## Datasets
 ### DragBench
 https://github.com/Yujun-Shi/DragDiffusion/releases/tag/v0.1.1
+### FreeDragBench
+https://drive.google.com/file/d/1p2muR6aW6fqEGW8yTcHl86DCuUkwgtNY/view?usp=sharing
 ### Drag100
 https://drive.google.com/file/d/1qzUizzrSRd4bBaT-0bCYZr-MDpiKXjhW/view?usp=sharing
 ## Software & Tools
