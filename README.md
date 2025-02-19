@@ -100,6 +100,23 @@ We present a unified probabilistic formulation for diffusion-based image editing
 
 ---
 
+### RotationDrag: Point-based Image Editing with Rotated Diffusion Features
+[![arXiv](https://img.shields.io/badge/arXiv-2401.06442-b31b1b.svg)](https://arxiv.org/abs/2401.06442) 
+[![GitHub stars](https://img.shields.io/github/stars/Tony-Lowe/RotationDrag?logo=github&label=Stars)](https://github.com/Tony-Lowe/RotationDrag)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/RotationDrag.pdf) 
+\
+2024-01-12\
+**Authors:** Minxing Luo, Wentao Cheng, Jian Yang
+<details span>
+<summary>Abstract</summary>
+A precise and user-friendly manipulation of image content while preserving image fidelity has always been crucial to the field of image editing. Thanks to the power of generative models, recent point-based image editing methods allow users to interactively change the image content with high generalizability by clicking several control points. But the above mentioned editing process is usually based on the assumption that features stay constant in the motion supervision step from initial to target points. In this work, we conduct a comprehensive investigation in the feature space of diffusion models, and find that features change acutely under in-plane rotation. Based on this, we propose a novel approach named RotationDrag, which significantly improves point-based image editing performance when users intend to in-plane rotate the image content. Our method tracks handle points more precisely by utilizing the feature map of the rotated images, thus ensuring precise optimization and high image fidelity. Furthermore, we build a in-plane rotation focused benchmark called RotateBench, the first benchmark to evaluate the performance of point-based image editing method under in-plane rotation scenario on both real images and generated images. A thorough user study demonstrates the superior capability in accomplishing in-plane rotation that users intend to achieve, comparing the DragDiffusion baseline and other existing diffusion-based methods.
+
+![RotationDrag](./imgs/RotationDrag.png)
+</details>
+
+---
+
+
 ### StableDrag: Stable Dragging for Point-based Image Editing
 ![Publication](https://img.shields.io/badge/2024-ECCV-43aa8b) 
 [![arXiv](https://img.shields.io/badge/arXiv-2403.04437-b31b1b.svg)](https://arxiv.org/abs/2403.04437) 
@@ -168,6 +185,27 @@ Flexible and accurate drag-based editing is a challenging task that has recently
 
 ![LucidDrag](./imgs/LucidDrag.png)
 </details>
+
+---
+
+### DragText: Rethinking Text Embedding in Point-based Image Editing
+![Publication](https://img.shields.io/badge/2025-WACV-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2407.17843-b31b1b.svg)](https://arxiv.org/abs/2407.17843) 
+[![GitHub stars](https://img.shields.io/github/stars/MICV-yonsei/DragText?logo=github&label=Stars)](https://github.com/MICV-yonsei/DragText)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://micv-yonsei.github.io/dragtext2025/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/DragText.pdf) 
+\
+2024-07-25\
+**Authors:** Gayoon Choi, Taejin Jeong, Sujung Hong, Seong Jae Hwang
+<details span>
+<summary>Abstract</summary>
+Point-based image editing enables accurate and flexible control through content dragging. However, the role of text embedding during the editing process has not been thoroughly investigated. A significant aspect that remains unexplored is the interaction between text and image embeddings. During the progressive editing in a diffusion model, the text embedding remains constant. As the image embedding increasingly diverges from its initial state, the discrepancy between the image and text embeddings presents a significant challenge. In this study, we found that the text prompt significantly influences the dragging process, particularly in maintaining content integrity and achieving the desired manipulation. Upon these insights, we propose DragText, which optimizes text embedding in conjunction with the dragging process to pair with the modified image embedding. Simultaneously, we regularize the text optimization process to preserve the integrity of the original text prompt. Our approach can be seamlessly integrated with existing diffusion-based drag methods, enhancing performance with only a few lines of code.
+
+![DragText](./imgs/DragText.png)
+</details>
+
+---
+
 
 ## Performance Improvement
 ### Diffeditor: Boosting accuracy and flexibility on diffusion-based image editing
@@ -295,24 +333,6 @@ Point-drag-based image editing methods, like DragDiffusion, have attracted signi
 
 ## Novel View Application
 
-### DragVideo: Interactive Drag-style Video Editing
-![Publication](https://img.shields.io/badge/2024-ECCV-43aa8b) 
-[![arXiv](https://img.shields.io/badge/arXiv-2312.02216-b31b1b.svg)](https://arxiv.org/abs/2312.02216) 
-[![GitHub stars](https://img.shields.io/github/stars/RickySkywalker/DragVideo-Official?logo=github&label=Stars)](https://github.com/RickySkywalker/DragVideo-Official)
-[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://dragvideo.github.io/)
-[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/DragVideo.pdf) 
-\
-2023-12-03\
-**Authors:** Yufan Deng, Ruida Wang, Yuhao Zhang, Yu-Wing Tai, Chi-Keung Tang
-<details span>
-<summary>Abstract</summary>
-Video generation models have shown their superior ability to generate photo-realistic video. However, how to accurately control (or edit) the video remains a formidable challenge. The main issues are: 1) how to perform direct and accurate user control in editing; 2) how to execute editings like changing shape, expression, and layout without unsightly distortion and artifacts to the edited content; and 3) how to maintain spatio-temporal consistency of video after editing. To address the above issues, we propose DragVideo, a general drag-style video editing framework. Inspired by DragGAN, DragVideo addresses issues 1) and 2) by proposing the drag-style video latent optimization method which gives desired control by updating noisy video latent according to drag instructions through video-level drag objective function. We amend issue 3) by integrating the video diffusion model with sample-specific LoRA and Mutual Self-Attention in DragVideo to ensure the edited result is spatio-temporally consistent. We also present a series of testing examples for drag-style video editing and conduct extensive experiments across a wide array of challenging editing tasks, such as motion, skeleton editing, etc, underscoring DragVideo can edit video in an intuitive, faithful to the user's intention manner, with nearly unnoticeable distortion and artifacts, while maintaining spatio-temporal consistency. While traditional prompt-based video editing fails to do the former two and directly applying image drag editing fails in the last, DragVideo's versatility and generality are emphasized.
-
-![DragVideo](./imgs/DragVideo.png)
-</details>
-
----
-
 ### Edit One for All: Interactive Batch Image Editing
 ![Publication](https://img.shields.io/badge/2024-CVPR-43aa8b) 
 [![arXiv](https://img.shields.io/badge/arXiv-2401.10219-b31b1b.svg)](https://arxiv.org/abs/2401.10219) 
@@ -321,7 +341,7 @@ Video generation models have shown their superior ability to generate photo-real
 [![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/EditOneforAll.pdf) 
 \
 2024-01-18\
-**Authors:** 
+**Authors:** Thao Nguyen, Utkarsh Ojha, Yuheng Li, Haotian Liu, Yong Jae Lee
 <details span>
 <summary>Abstract</summary>
 In recent years, image editing has advanced remarkably. With increased human control, it is now possible to edit an image in a plethora of ways; from specifying in text what we want to change, to straight up dragging the contents of the image in an interactive point-based manner. However, most of the focus has remained on editing single images at a time. Whether and how we can simultaneously edit large batches of images has remained understudied. With the goal of minimizing human supervision in the editing process, this paper presents a novel method for interactive batch image editing using StyleGAN as the medium. Given an edit specified by users in an example image (e.g., make the face frontal), our method can automatically transfer that edit to other test images, so that regardless of their initial state (pose), they all arrive at the same final state (e.g., all facing front). Extensive experiments demonstrate that edits performed using our method have similar visual quality to existing single-image-editing methods, while having more visual consistency and saving significant time and human effort.
@@ -346,6 +366,43 @@ We introduce DragAPart, a method that, given an image and a set of drags as inpu
 
 ![DragAPart](./imgs/DragAPart.png)
 </details>
+
+## Video Drag Editing
+### DragVideo: Interactive Drag-style Video Editing
+![Publication](https://img.shields.io/badge/2024-ECCV-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2312.02216-b31b1b.svg)](https://arxiv.org/abs/2312.02216) 
+[![GitHub stars](https://img.shields.io/github/stars/RickySkywalker/DragVideo-Official?logo=github&label=Stars)](https://github.com/RickySkywalker/DragVideo-Official)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://dragvideo.github.io/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/DragVideo.pdf) 
+\
+2023-12-03\
+**Authors:** Yufan Deng, Ruida Wang, Yuhao Zhang, Yu-Wing Tai, Chi-Keung Tang
+<details span>
+<summary>Abstract</summary>
+Video generation models have shown their superior ability to generate photo-realistic video. However, how to accurately control (or edit) the video remains a formidable challenge. The main issues are: 1) how to perform direct and accurate user control in editing; 2) how to execute editings like changing shape, expression, and layout without unsightly distortion and artifacts to the edited content; and 3) how to maintain spatio-temporal consistency of video after editing. To address the above issues, we propose DragVideo, a general drag-style video editing framework. Inspired by DragGAN, DragVideo addresses issues 1) and 2) by proposing the drag-style video latent optimization method which gives desired control by updating noisy video latent according to drag instructions through video-level drag objective function. We amend issue 3) by integrating the video diffusion model with sample-specific LoRA and Mutual Self-Attention in DragVideo to ensure the edited result is spatio-temporally consistent. We also present a series of testing examples for drag-style video editing and conduct extensive experiments across a wide array of challenging editing tasks, such as motion, skeleton editing, etc, underscoring DragVideo can edit video in an intuitive, faithful to the user's intention manner, with nearly unnoticeable distortion and artifacts, while maintaining spatio-temporal consistency. While traditional prompt-based video editing fails to do the former two and directly applying image drag editing fails in the last, DragVideo's versatility and generality are emphasized.
+
+![DragVideo](./imgs/DragVideo.png)
+</details>
+
+---
+
+### Drag-A-Video: Non-rigid Video Editing with Point-based Interaction
+[![arXiv](https://img.shields.io/badge/arXiv-2312.02936-b31b1b.svg)](https://arxiv.org/abs/2312.02936) 
+[![GitHub stars](https://img.shields.io/github/stars/tyshiwo1/drag-a-video?logo=github&label=Stars)](https://github.com/tyshiwo1/drag-a-video)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://drag-a-video.github.io/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/Drag-A-Video.pdf) 
+\
+2023-12-05\
+**Authors:** Yao Teng, Enze Xie, Yue Wu, Haoyu Han, Zhenguo Li, Xihui Liu
+<details span>
+<summary>Abstract</summary>
+Video editing is a challenging task that requires manipulating videos on both the spatial and temporal dimensions. Existing methods for video editing mainly focus on changing the appearance or style of the objects in the video, while keeping their structures unchanged. However, there is no existing method that allows users to interactively ``drag'' any points of instances on the first frame to precisely reach the target points with other frames consistently deformed. In this paper, we propose a new diffusion-based method for interactive point-based video manipulation, called Drag-A-Video. Our method allows users to click pairs of handle points and target points as well as masks on the first frame of an input video. Then, our method transforms the inputs into point sets and propagates these sets across frames. To precisely modify the contents of the video, we employ a new video-level motion supervision to update the features of the video and introduce the latent offsets to achieve this update at multiple denoising timesteps. We propose a temporal-consistent point tracking module to coordinate the movement of the points in the handle point sets. We demonstrate the effectiveness and flexibility of our method on various videos. 
+
+![Drag-A-Video](./imgs/Drag-A-Video.png)
+</details>
+
+---
+
 
 ## 3D Drag Editing
 ### Drag3D: DragGAN meets GET3D
