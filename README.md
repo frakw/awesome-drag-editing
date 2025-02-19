@@ -6,6 +6,8 @@
 - [Performance Improvement](#performance-improvement)
 - [Novel View Perspective](#novel-view-perspective)
 - [Novel View Application](#novel-view-application)
+- [Video Drag Editing](#video-drag-editing)
+- [3D Drag Editing](#3D-drag-editing)
 - [Uncategory Papers](#uncategory-papers)
 - [Datasets](#datasets)
 - [Software & Tools](#software--tools)
@@ -406,7 +408,85 @@ Video editing is a challenging task that requires manipulating videos on both th
 
 ## 3D Drag Editing
 ### Drag3D: DragGAN meets GET3D
-https://github.com/ashawkey/Drag3D
+[![GitHub stars](https://img.shields.io/github/stars/ashawkey/Drag3D?logo=github&label=Stars)](https://github.com/ashawkey/Drag3D)
+\
+2023-05-23 \
+[https://github.com/ashawkey/Drag3D](https://github.com/ashawkey/Drag3D)
+<details span>
+<summary>Abstract</summary>
+
+
+DragGAN meets GET3D for interactive mesh generation and editing.
+
+![Drag3D](./imgs/Drag3D.png)
+</details>
+
+---
+
+### DragGaussian: Enabling Drag-style Manipulation on 3D Gaussian Representation
+[![arXiv](https://img.shields.io/badge/arXiv-2405.05800-b31b1b.svg)](https://arxiv.org/abs/2405.05800) 
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/DragGaussian.pdf) 
+\
+2025-05-09\
+**Authors:** Sitian Shen, Jing Xu, Yuheng Yuan, Xingyi Yang, Qiuhong Shen, Xinchao Wang
+<details span>
+<summary>Abstract</summary>
+User-friendly 3D object editing is a challenging task that has attracted significant attention recently. The limitations of direct 3D object editing without 2D prior knowledge have prompted increased attention towards utilizing 2D generative models for 3D editing. While existing methods like Instruct NeRF-to-NeRF offer a solution, they often lack user-friendliness, particularly due to semantic guided editing. In the realm of 3D representation, 3D Gaussian Splatting emerges as a promising approach for its efficiency and natural explicit property, facilitating precise editing tasks. Building upon these insights, we propose DragGaussian, a 3D object drag-editing framework based on 3D Gaussian Splatting, leveraging diffusion models for interactive image editing with open-vocabulary input. This framework enables users to perform drag-based editing on pre-trained 3D Gaussian object models, producing modified 2D images through multi-view consistent editing. Our contributions include the introduction of a new task, the development of DragGaussian for interactive point-based 3D editing, and comprehensive validation of its effectiveness through qualitative and quantitative experiments.
+
+![DragGaussian](./imgs/DragGaussian.png)
+</details>
+
+---
+
+### MvDrag3D: Drag-based Creative 3D Editing via Multi-view Generation-Reconstruction Priors
+[![arXiv](https://img.shields.io/badge/arXiv-2410.16272-b31b1b.svg)](https://arxiv.org/abs/2410.16272) 
+[![GitHub stars](https://img.shields.io/github/stars/chenhonghua/MvDrag3D?logo=github&label=Stars)](https://github.com/chenhonghua/MvDrag3D)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://chenhonghua.github.io/MyProjects/MvDrag3D/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/MvDrag3D.pdf) 
+\
+2024-10-21\
+**Authors:** Honghua Chen, Yushi Lan, Yongwei Chen, Yifan Zhou, Xingang Pan
+<details span>
+<summary>Abstract</summary>
+Drag-based editing has become popular in 2D content creation, driven by the capabilities of image generative models. However, extending this technique to 3D remains a challenge. Existing 3D drag-based editing methods, whether employing explicit spatial transformations or relying on implicit latent optimization within limited-capacity 3D generative models, fall short in handling significant topology changes or generating new textures across diverse object categories. To overcome these limitations, we introduce MVDrag3D, a novel framework for more flexible and creative drag-based 3D editing that leverages multi-view generation and reconstruction priors. At the core of our approach is the usage of a multi-view diffusion model as a strong generative prior to perform consistent drag editing over multiple rendered views, which is followed by a reconstruction model that reconstructs 3D Gaussians of the edited object. While the initial 3D Gaussians may suffer from misalignment between different views, we address this via view-specific deformation networks that adjust the position of Gaussians to be well aligned. In addition, we propose a multi-view score function that distills generative priors from multiple views to further enhance the view consistency and visual quality. Extensive experiments demonstrate that MVDrag3D provides a precise, generative, and flexible solution for 3D drag-based editing, supporting more versatile editing effects across various object categories and 3D representations.
+
+![MvDrag3D](./imgs/MvDrag3D.png)
+</details>
+
+---
+
+### DragScene: Interactive 3D Scene Editing with Single-view Drag Instructions
+[![arXiv](https://img.shields.io/badge/arXiv-2412.13552-b31b1b.svg)](https://arxiv.org/abs/2412.13552) 
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/DragScene.pdf) 
+\
+2024-12-18\
+**Authors:** Chenghao Gu, Zhenzhe Li, Zhengqi Zhang, Yunpeng Bai, Shuzhao Xie, Zhi Wang
+<details span>
+<summary>Abstract</summary>
+3D editing has shown remarkable capability in editing scenes based on various instructions. However, existing methods struggle with achieving intuitive, localized editing, such as selectively making flowers blossom. Drag-style editing has shown exceptional capability to edit images with direct manipulation instead of ambiguous text commands. Nevertheless, extending drag-based editing to 3D scenes presents substantial challenges due to multi-view inconsistency. To this end, we introduce DragScene, a framework that integrates drag-style editing with diverse 3D representations. First, latent optimization is performed on a reference view to generate 2D edits based on user instructions. Subsequently, coarse 3D clues are reconstructed from the reference view using a point-based representation to capture the geometric details of the edits. The latent representation of the edited view is then mapped to these 3D clues, guiding the latent optimization of other views. This process ensures that edits are propagated seamlessly across multiple views, maintaining multi-view consistency. Finally, the target 3D scene is reconstructed from the edited multi-view images. Extensive experiments demonstrate that DragScene facilitates precise and flexible drag-style editing of 3D scenes, supporting broad applicability across diverse 3D representations.
+
+![DragScene](./imgs/DragScene.png)
+</details>
+
+---
+
+### 3DGS-Drag: Dragging Gaussians for Intuitive Point-Based 3D Editing
+![Publication](https://img.shields.io/badge/2025-ICLR-43aa8b) 
+[![arXiv](https://img.shields.io/badge/OpenReview-b31b1b.svg)](https://openreview.net/forum?id=7JUrBLDjCq&referrer=%5Bthe%20profile%20of%20Jiahua%20Dong%5D(%2Fprofile%3Fid%3D~Jiahua_Dong3)) 
+[![GitHub stars](https://img.shields.io/github/stars/Dongjiahua/3DGS-Drag?logo=github&label=Stars)](https://github.com/Dongjiahua/3DGS-Drag)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/3DGS-Drag.pdf) 
+\
+2025-01-23\
+**Authors:** Jiahua Dong, Yu-Xiong Wang
+<details span>
+<summary>Abstract</summary>
+The transformative potential of 3D content creation has been progressively unlocked through advancements in generative models. Recently, intuitive drag editing with geometric changes has attracted significant attention in 2D editing yet remains challenging for 3D scenes. In this paper, we introduce 3DGS-Drag, a point-based 3D editing framework that provides efficient, intuitive drag manipulation of real 3D scenes. Our approach bridges the gap between deformation-based and 2D-editing-based 3D editing methods, addressing their limitations to geometry-related content editing. We leverage two key innovations: deformation guidance utilizing 3D Gaussian Splatting for consistent geometric modifications and diffusion guidance for content correction and visual quality enhancement. A progressive editing strategy further supports aggressive 3D drag edits. Our method enables a wide range of edits, including motion change, shape adjustment, inpainting, and content extension. Experimental results demonstrate the effectiveness of 3DGS-Drag in various scenes, achieving state-of-the-art performance in geometry-related 3D content editing. Notably, the editing is efficient, taking 10 to 20 minutes on a single RTX 4090 GPU.
+
+![3DGS-Drag](./imgs/3DGS-Drag.png)
+</details>
+
+---
+
 ## Uncategory Papers
 
 ### GeoDiffuser: Geometry-Based Image Editing with Diffusion Models
