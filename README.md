@@ -208,6 +208,23 @@ Point-based image editing enables accurate and flexible control through content 
 
 ---
 
+### AdaptiveDrag: Semantic-Driven Dragging on Diffusion-Based Image Editing
+[![arXiv](https://img.shields.io/badge/arXiv-2410.12696-b31b1b.svg)](https://arxiv.org/abs/2410.12696) 
+[![GitHub stars](https://img.shields.io/github/stars/Calvin11311/AdaptiveDrag?logo=github&label=Stars)](https://github.com/Calvin11311/AdaptiveDrag)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/AdaptiveDrag.pdf) 
+\
+2024-10-16\
+**Authors:** DuoSheng Chen, Binghui Chen, Yifeng Geng, Liefeng Bo
+<details span>
+<summary>Abstract</summary>
+Recently, several point-based image editing methods (e.g., DragDiffusion, FreeDrag, DragNoise) have emerged, yielding precise and high-quality results based on user instructions. However, these methods often make insufficient use of semantic information, leading to less desirable results. In this paper, we proposed a novel mask-free point-based image editing method, AdaptiveDrag, which provides a more flexible editing approach and generates images that better align with user intent. Specifically, we design an auto mask generation module using super-pixel division for user-friendliness. Next, we leverage a pre-trained diffusion model to optimize the latent, enabling the dragging of features from handle points to target points. To ensure a comprehensive connection between the input image and the drag process, we have developed a semantic-driven optimization. We design adaptive steps that are supervised by the positions of the points and the semantic regions derived from super-pixel segmentation. This refined optimization process also leads to more realistic and accurate drag results. Furthermore, to address the limitations in the generative consistency of the diffusion model, we introduce an innovative corresponding loss during the sampling process. Building on these effective designs, our method delivers superior generation results using only the single input image and the handle-target point pairs. Extensive experiments have been conducted and demonstrate that the proposed method outperforms others in handling various drag instructions (e.g., resize, movement, extension) across different domains (e.g., animals, human face, land space, clothing).
+
+![AdaptiveDrag](./imgs/AdaptiveDrag.png)
+</details>
+
+---
+
+
 
 ## Performance Improvement
 ### Diffeditor: Boosting accuracy and flexibility on diffusion-based image editing
@@ -486,6 +503,24 @@ The transformative potential of 3D content creation has been progressively unloc
 </details>
 
 ---
+
+### Drag Your Gaussian: Effective Drag-Based Editing with Score Distillation for 3D Gaussian Splatting
+[![arXiv](https://img.shields.io/badge/arXiv-2501.18672-b31b1b.svg)](https://arxiv.org/abs/2501.18672) 
+[![GitHub stars](https://img.shields.io/github/stars/Quyans/Drag-Your-Gaussian?logo=github&label=Stars)](https://github.com/Quyans/Drag-Your-Gaussian)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://quyans.github.io/Drag-Your-Gaussian/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/DragYourGaussian.pdf) 
+\
+2025-01-30\
+**Authors:** Yansong Qu, Dian Chen, Xinyang Li, Xiaofan Li, Shengchuan Zhang, Liujuan Cao, Rongrong Ji
+<details span>
+<summary>Abstract</summary>
+Recent advancements in 3D scene editing have been propelled by the rapid development of generative models. Existing methods typically utilize generative models to perform text-guided editing on 3D representations, such as 3D Gaussian Splatting (3DGS). However, these methods are often limited to texture modifications and fail when addressing geometric changes, such as editing a character's head to turn around. Moreover, such methods lack accurate control over the spatial position of editing results, as language struggles to precisely describe the extent of edits. To overcome these limitations, we introduce DYG, an effective 3D drag-based editing method for 3D Gaussian Splatting. It enables users to conveniently specify the desired editing region and the desired dragging direction through the input of 3D masks and pairs of control points, thereby enabling precise control over the extent of editing. DYG integrates the strengths of the implicit triplane representation to establish the geometric scaffold of the editing results, effectively overcoming suboptimal editing outcomes caused by the sparsity of 3DGS in the desired editing regions. Additionally, we incorporate a drag-based Latent Diffusion Model into our method through the proposed Drag-SDS loss function, enabling flexible, multi-view consistent, and fine-grained editing. Extensive experiments demonstrate that DYG conducts effective drag-based editing guided by control point prompts, surpassing other baselines in terms of editing effect and quality, both qualitatively and quantitatively.
+
+![DragYourGaussian](./imgs/DragYourGaussian.png)
+</details>
+
+---
+
 
 ## Uncategory Papers
 
