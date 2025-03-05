@@ -526,7 +526,9 @@ Recent advancements in 3D scene editing have been propelled by the rapid develop
 ## Uncategory Papers
 
 ### GeoDiffuser: Geometry-Based Image Editing with Diffusion Models
-[![arXiv](https://img.shields.io/badge/arXiv-2307.02421-b31b1b.svg)](https://arxiv.org/abs/2305.10973) 
+![Publication](https://img.shields.io/badge/2024-WACV-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2404.14403-b31b1b.svg)](https://arxiv.org/abs/2404.14403) 
+[![GitHub stars](https://img.shields.io/github/stars/RahulSajnani/GeoDiffuser?logo=github&label=Stars)](https://github.com/RahulSajnani/GeoDiffuser)
 [![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://ivl.cs.brown.edu/research/geodiffuser.html)
 [![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/GeoDiffuser.pdf) 
 \
