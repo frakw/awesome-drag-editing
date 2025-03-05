@@ -7,7 +7,8 @@
 - [Novel View Perspective](#novel-view-perspective)
 - [Novel View Application](#novel-view-application)
 - [Video Drag Editing](#video-drag-editing)
-- [3D Drag Editing](#3D-drag-editing)
+- [3D Drag Editing For 2D Image](#3D-drag-editing-for-2d-image)
+- [3D Drag Editing For 3D Object](#3D-drag-editing-for-3d-object)
 - [Uncategory Papers](#uncategory-papers)
 - [Datasets](#datasets)
 - [Software & Tools](#software--tools)
@@ -208,6 +209,24 @@ Point-based image editing enables accurate and flexible control through content 
 </details>
 
 ---
+
+### CLIPDrag: Combining Text-based and Drag-based Instructions for Image Editing
+![Publication](https://img.shields.io/badge/2025-ICLR-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2410.03097-b31b1b.svg)](https://arxiv.org/abs/2410.03097) 
+[![GitHub stars](https://img.shields.io/github/stars/HKUST-LongGroup/CLIPDrag?logo=github&label=Stars)](https://github.com/HKUST-LongGroup/CLIPDrag)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/CLIPDrag.pdf) 
+\
+2024-10-04\
+**Authors:** Ziqi Jiang, Zhen Wang, Long Chen
+<details span>
+<summary>Abstract</summary>
+Precise and flexible image editing remains a fundamental challenge in computer vision. Based on the modified areas, most editing methods can be divided into two main types: global editing and local editing. In this paper, we choose the two most common editing approaches (ie text-based editing and drag-based editing) and analyze their drawbacks. Specifically, text-based methods often fail to describe the desired modifications precisely, while drag-based methods suffer from ambiguity. To address these issues, we proposed \textbf{CLIPDrag}, a novel image editing method that is the first to combine text and drag signals for precise and ambiguity-free manipulations on diffusion models. To fully leverage these two signals, we treat text signals as global guidance and drag points as local information. Then we introduce a novel global-local motion supervision method to integrate text signals into existing drag-based methods by adapting a pre-trained language-vision model like CLIP. Furthermore, we also address the problem of slow convergence in CLIPDrag by presenting a fast point-tracking method that enforces drag points moving toward correct directions. Extensive experiments demonstrate that CLIPDrag outperforms existing single drag-based methods or text-based methods.
+
+![CLIPDrag](./imgs/CLIPDrag.png)
+</details>
+
+---
+
 
 ### AdaptiveDrag: Semantic-Driven Dragging on Diffusion-Based Image Editing
 [![arXiv](https://img.shields.io/badge/arXiv-2410.12696-b31b1b.svg)](https://arxiv.org/abs/2410.12696) 
@@ -423,8 +442,27 @@ Video editing is a challenging task that requires manipulating videos on both th
 
 ---
 
+## 3D Drag Editing for 2D Image
+### Diffusion Handles: Enabling 3D Edits for Diffusion Models by Lifting Activations to 3D
+![Publication](https://img.shields.io/badge/2024-CVPR-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2312.02190-b31b1b.svg)](https://arxiv.org/abs/2312.02190) 
+[![GitHub stars](https://img.shields.io/github/stars/adobe-research/DiffusionHandles?logo=github&label=Stars)](https://github.com/adobe-research/DiffusionHandles)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://diffusionhandles.github.io/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/DiffusionHandles.pdf) 
+\
+2023-12-02\
+**Authors:** Karran Pandey, Paul Guerrero, Matheus Gadelha, Yannick Hold-Geoffroy, Karan Singh, Niloy Mitra
+<details span>
+<summary>Abstract</summary>
+Diffusion Handles is a novel approach to enabling 3D object edits on diffusion images. We accomplish these edits using existing pre-trained diffusion models, and 2D image depth estimation, without any fine-tuning or 3D object retrieval. The edited results remain plausible, photo-real, and preserve object identity. Diffusion Handles address a critically missing facet of generative image based creative design, and significantly advance the state-of-the-art in generative image editing. Our key insight is to lift diffusion activations for an object to 3D using a proxy depth, 3D-transform the depth and associated activations, and project them back to image space. The diffusion process applied to the manipulated activations with identity control, produces plausible edited images showing complex 3D occlusion and lighting effects. We evaluate Diffusion Handles: quantitatively, on a large synthetic data benchmark; and qualitatively by a user study, showing our output to be more plausible, and better than prior art at both, 3D editing and identity control. 
 
-## 3D Drag Editing
+![DiffusionHandles](./imgs/DiffusionHandles.png)
+</details>
+
+---
+
+
+## 3D Drag Editing for 3D Object
 ### Drag3D: DragGAN meets GET3D
 [![GitHub stars](https://img.shields.io/github/stars/ashawkey/Drag3D?logo=github&label=Stars)](https://github.com/ashawkey/Drag3D)
 \
@@ -526,7 +564,7 @@ Recent advancements in 3D scene editing have been propelled by the rapid develop
 ## Uncategory Papers
 
 ### GeoDiffuser: Geometry-Based Image Editing with Diffusion Models
-![Publication](https://img.shields.io/badge/2024-WACV-43aa8b) 
+![Publication](https://img.shields.io/badge/2025-WACV-43aa8b) 
 [![arXiv](https://img.shields.io/badge/arXiv-2404.14403-b31b1b.svg)](https://arxiv.org/abs/2404.14403) 
 [![GitHub stars](https://img.shields.io/github/stars/RahulSajnani/GeoDiffuser?logo=github&label=Stars)](https://github.com/RahulSajnani/GeoDiffuser)
 [![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://ivl.cs.brown.edu/research/geodiffuser.html)
@@ -573,6 +611,7 @@ comming soon...
 ## Related Repositories
 * [Awesome-DragGAN](https://github.com/OpenGVLab/Awesome-DragGAN)
 * [Awesome Diffusion Categorized](https://github.com/wangkai930418/awesome-diffusion-categorized?tab=readme-ov-file#drag-edit)
+* [Awesome-Image-Editing](https://github.com/xinchengshuai/Awesome-Image-Editing)
 
 ## Contact Info
 [contact@frakw.com](mailto:contact@frakw.com)
