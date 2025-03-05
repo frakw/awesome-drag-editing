@@ -563,6 +563,24 @@ Recent advancements in 3D scene editing have been propelled by the rapid develop
 
 ## Uncategory Papers
 
+### Diffusion Self-Guidance for Controllable Image Generation
+![Publication](https://img.shields.io/badge/2023-NeurIPS-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2306.00986-b31b1b.svg)](https://arxiv.org/abs/2306.00986) 
+[![GitHub stars](https://img.shields.io/github/stars/Sainzerjj/Free-Guidance-Diffusion?logo=github&label=Stars)](https://github.com/Sainzerjj/Free-Guidance-Diffusion)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://dave.ml/selfguidance/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/Self-Guidance-Diffusion.pdf) 
+\
+2023-06-01\
+**Authors:** Dave Epstein, Allan Jabri, Ben Poole, Alexei A. Efros, Aleksander Holynski
+<details span>
+<summary>Abstract</summary>
+Large-scale generative models are capable of producing high-quality images from detailed text descriptions. However, many aspects of an image are difficult or impossible to convey through text. We introduce self-guidance, a method that provides greater control over generated images by guiding the internal representations of diffusion models. We demonstrate that properties such as the shape, location, and appearance of objects can be extracted from these representations and used to steer sampling. Self-guidance works similarly to classifier guidance, but uses signals present in the pretrained model itself, requiring no additional models or training. We show how a simple set of properties can be composed to perform challenging image manipulations, such as modifying the position or size of objects, merging the appearance of objects in one image with the layout of another, composing objects from many images into one, and more. We also show that self-guidance can be used to edit real images. 
+
+![Self-Guidance-Diffusion](./imgs/Self-Guidance-Diffusion.png)
+</details>
+
+---
+
 ### GeoDiffuser: Geometry-Based Image Editing with Diffusion Models
 ![Publication](https://img.shields.io/badge/2025-WACV-43aa8b) 
 [![arXiv](https://img.shields.io/badge/arXiv-2404.14403-b31b1b.svg)](https://arxiv.org/abs/2404.14403) 
@@ -595,6 +613,7 @@ Diffusion models generate images with an unprecedented level of quality, but how
 </details>
 
 ---
+
 
 
 ## Datasets
