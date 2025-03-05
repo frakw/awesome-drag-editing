@@ -136,7 +136,7 @@ Point-based image editing has attracted remarkable attention since the emergence
 
 ---
 
-### Drag Your Noise: Interactive Point-based Editing via Diffusion Semantic Propagation
+### Drag Your Noise: Interactive Point-based Editing via Diffusion Semantic Propagation (DragNoise)
 ![Publication](https://img.shields.io/badge/2024-CVPR-43aa8b) 
 [![arXiv](https://img.shields.io/badge/arXiv-2404.01050-b31b1b.svg)](https://arxiv.org/abs/2404.01050) 
 [![GitHub stars](https://img.shields.io/github/stars/haofengl/DragNoise?logo=github&label=Stars)](https://github.com/haofengl/DragNoise)
@@ -155,6 +155,7 @@ Point-based interactive editing serves as an essential tool to complement the co
 ---
 
 ### GoodDrag: Towards Good Practices for Drag Editing with Diffusion Models
+![Publication](https://img.shields.io/badge/2025-ICML-43aa8b) 
 [![arXiv](https://img.shields.io/badge/arXiv-2404.07206-b31b1b.svg)](https://arxiv.org/abs/2404.07206) 
 [![GitHub stars](https://img.shields.io/github/stars/zewei-Zhang/GoodDrag?logo=github&label=Stars)](https://github.com/zewei-Zhang/GoodDrag)
 [![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://gooddrag.github.io/)
@@ -172,7 +173,7 @@ In this paper, we introduce GoodDrag, a novel approach to improve the stability 
 ---
 
 
-### Localize, Understand, Collaborate: Semantic-Aware Dragging via Intention Reasoner
+### Localize, Understand, Collaborate: Semantic-Aware Dragging via Intention Reasoner (LucidDrag)
 ![Publication](https://img.shields.io/badge/2024-NeurIPS-43aa8b) 
 [![arXiv](https://img.shields.io/badge/arXiv-2406.00432-b31b1b.svg)](https://arxiv.org/abs/2406.00432) 
 [![GitHub stars](https://img.shields.io/github/stars/cuixing100876/LucidDrag-NeurIPS2024?logo=github&label=Stars)](https://github.com/cuixing100876/LucidDrag-NeurIPS2024)
