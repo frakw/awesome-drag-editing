@@ -156,7 +156,7 @@ Point-based interactive editing serves as an essential tool to complement the co
 ---
 
 ### GoodDrag: Towards Good Practices for Drag Editing with Diffusion Models
-![Publication](https://img.shields.io/badge/2025-ICML-43aa8b) 
+![Publication](https://img.shields.io/badge/2025-ICLR-43aa8b) 
 [![arXiv](https://img.shields.io/badge/arXiv-2404.07206-b31b1b.svg)](https://arxiv.org/abs/2404.07206) 
 [![GitHub stars](https://img.shields.io/github/stars/zewei-Zhang/GoodDrag?logo=github&label=Stars)](https://github.com/zewei-Zhang/GoodDrag)
 [![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://gooddrag.github.io/)
@@ -283,7 +283,6 @@ Generative models are gaining increasing popularity, and the demand for precisel
 ---
 
 ### LightningDrag: Lightning Fast and Accurate Drag-based Image Editing Emerging from Videos
-![Publication](https://img.shields.io/badge/2024-CVPR-43aa8b) 
 [![arXiv](https://img.shields.io/badge/arXiv-2405.13722-b31b1b.svg)](https://arxiv.org/abs/2405.13722) 
 [![GitHub stars](https://img.shields.io/github/stars/magic-research/LightningDrag?logo=github&label=Stars)](https://github.com/magic-research/LightningDrag)
 [![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://lightning-drag.github.io/)
@@ -581,6 +580,25 @@ Large-scale generative models are capable of producing high-quality images from 
 
 ---
 
+### Motion Guidance: Diffusion-Based Image Editing with Differentiable Motion Estimators
+![Publication](https://img.shields.io/badge/2024-ICLR-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2401.18085-b31b1b.svg)](https://arxiv.org/abs/2401.18085) 
+[![GitHub stars](https://img.shields.io/github/stars/dangeng/motion_guidance?logo=github&label=Stars)](https://github.com/dangeng/motion_guidance)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://dangeng.github.io/motion_guidance/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/MotionGuidance.pdf) 
+\
+2024-01-31\
+**Authors:** Daniel Geng, Andrew Owens
+<details span>
+<summary>Abstract</summary>
+Diffusion models are capable of generating impressive images conditioned on text descriptions, and extensions of these models allow users to edit images at a relatively coarse scale. However, the ability to precisely edit the layout, position, pose, and shape of objects in images with diffusion models is still difficult. To this end, we propose motion guidance, a zero-shot technique that allows a user to specify dense, complex motion fields that indicate where each pixel in an image should move. Motion guidance works by steering the diffusion sampling process with the gradients through an off-the-shelf optical flow network. Specifically, we design a guidance loss that encourages the sample to have the desired motion, as estimated by a flow network, while also being visually similar to the source image. By simultaneously sampling from a diffusion model and guiding the sample to have low guidance loss, we can obtain a motion-edited image. We demonstrate that our technique works on complex motions and produces high quality edits of real and generated images.
+
+![MotionGuidance](./imgs/MotionGuidance.png)
+</details>
+
+---
+
+
 ### GeoDiffuser: Geometry-Based Image Editing with Diffusion Models
 ![Publication](https://img.shields.io/badge/2025-WACV-43aa8b) 
 [![arXiv](https://img.shields.io/badge/arXiv-2404.14403-b31b1b.svg)](https://arxiv.org/abs/2404.14403) 
@@ -596,6 +614,8 @@ The success of image generative models has enabled us to build methods that can 
 
 ![GeoDiffuser](./imgs/GeoDiffuser.png)
 </details>
+
+---
 
 ### Move Anything with Layered Scene Diffusion
 ![Publication](https://img.shields.io/badge/2024-CVPR-43aa8b) 
