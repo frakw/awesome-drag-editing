@@ -707,7 +707,7 @@ Large-scale generative models are capable of producing high-quality images from 
 ---
 
 ### Masked-Attention Diffusion Guidance for Spatially Controlling Text-to-Image Generation
-![Publication](https://img.shields.io/badge/2024-The_Visual_Computer-43aa8b) 
+![Publication](https://img.shields.io/badge/2024-TVC-43aa8b) 
 [![arXiv](https://img.shields.io/badge/arXiv-2308.06027-b31b1b.svg)](https://arxiv.org/abs/2308.06027) 
 [![GitHub stars](https://img.shields.io/github/stars/endo-yuki-t/MAG?logo=github&label=Stars)](https://github.com/endo-yuki-t/MAG)
 [![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://www.cgg.cs.tsukuba.ac.jp/~endo/projects/MAG/)
@@ -812,6 +812,7 @@ comming soon...
 * [Awesome-DragGAN](https://github.com/OpenGVLab/Awesome-DragGAN)
 * [Awesome Diffusion Categorized](https://github.com/wangkai930418/awesome-diffusion-categorized?tab=readme-ov-file#drag-edit)
 * [Awesome-Image-Editing](https://github.com/xinchengshuai/Awesome-Image-Editing)
+* [training-free-methods](https://github.com/littlewhitesea/training-free-methods)
 
 ## Contact Info
 [contact@frakw.com](mailto:contact@frakw.com)
