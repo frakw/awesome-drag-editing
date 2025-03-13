@@ -462,6 +462,22 @@ In recent years, image editing has advanced remarkably. With increased human con
 
 ---
 
+### DragTex: Generative Point-Based Texture Editing on 3D Mesh
+[![arXiv](https://img.shields.io/badge/arXiv-2403.02217-b31b1b.svg)](https://arxiv.org/abs/2403.02217) 
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/DragTex.pdf) 
+\
+2024-03-04\
+**Authors:** Yudi Zhang, Qi Xu, Lei Zhang
+<details span>
+<summary>Abstract</summary>
+Creating 3D textured meshes using generative artificial intelligence has garnered significant attention recently. While existing methods support text-based generative texture generation or editing on 3D meshes, they often struggle to precisely control pixels of texture images through more intuitive interaction. While 2D images can be edited generatively using drag interaction, applying this type of methods directly to 3D mesh textures still leads to issues such as the lack of local consistency among multiple views, error accumulation and long training times. To address these challenges, we propose a generative point-based 3D mesh texture editing method called DragTex. This method utilizes a diffusion model to blend locally inconsistent textures in the region near the deformed silhouette between different views, enabling locally consistent texture editing. Besides, we fine-tune a decoder to reduce reconstruction errors in the non-drag region, thereby mitigating overall error accumulation. Moreover, we train LoRA using multi-view images instead of training each view individually, which significantly shortens the training time. The experimental results show that our method effectively achieves dragging textures on 3D meshes and generates plausible textures that align with the desired intent of drag interaction.
+
+![DragTex](./imgs/DragTex.png)
+</details>
+
+---
+
+
 ### Dragapart: Learning a part-level motion prior for articulated objects
 ![Publication](https://img.shields.io/badge/2024-ECCV-43aa8b) 
 [![arXiv](https://img.shields.io/badge/arXiv-2403.15382-b31b1b.svg)](https://arxiv.org/abs/2403.15382) 
@@ -477,6 +493,25 @@ We introduce DragAPart, a method that, given an image and a set of drags as inpu
 
 ![DragAPart](./imgs/DragAPart.png)
 </details>
+
+### DragTraffic: Interactive and Controllable Traffic Scene Generation for Autonomous Driving
+![Publication](https://img.shields.io/badge/2024-IROS-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2404.12624-b31b1b.svg)](https://arxiv.org/abs/2404.12624) 
+[![GitHub stars](https://img.shields.io/github/stars/chantsss/Dragtraffic?logo=github&label=Stars)](https://github.com/chantsss/Dragtraffic)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://chantsss.github.io/Dragtraffic/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/DragTraffic.pdf) 
+\
+2024-04-19\
+**Authors:** Sheng Wang, Ge Sun, Fulong Ma, Tianshuai Hu, Qiang Qin, Yongkang Song, Lei Zhu, Junwei Liang
+<details span>
+<summary>Abstract</summary>
+Evaluating and training autonomous driving systems require diverse and scalable corner cases. However, most existing scene generation methods lack controllability, accuracy, and versatility, resulting in unsatisfactory generation results. Inspired by DragGAN in image generation, we propose DragTraffic, a generalized, interactive, and controllable traffic scene generation framework based on conditional diffusion. DragTraffic enables non-experts to generate a variety of realistic driving scenarios for different types of traffic agents through an adaptive mixture expert architecture. We employ a regression model to provide a general initial solution and a refinement process based on the conditional diffusion model to ensure diversity. User-customized context is introduced through cross-attention to ensure high controllability. Experiments on a real-world driving dataset show that DragTraffic outperforms existing methods in terms of authenticity, diversity, and freedom. 
+
+![DragTraffic](./imgs/DragTraffic.png)
+</details>
+
+---
+
 
 ## Video Drag Editing
 ### DragVideo: Interactive Drag-style Video Editing
