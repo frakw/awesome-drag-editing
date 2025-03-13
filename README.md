@@ -373,6 +373,23 @@ Drag-based image editing using generative models provides precise control over i
 
 ---
 
+### Auto DragGAN: Editing the Generative Image Manifold in an Autoregressive Manner
+![Publication](https://img.shields.io/badge/2024-MM-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2407.18656-b31b1b.svg)](https://arxiv.org/abs/2407.18656) 
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/AutoDragGAN.pdf) 
+\
+2024-07-26\
+**Authors:** Pengxiang Cai, Zhiwei Liu, Guibo Zhu, Yunfang Niu, Jinqiao Wang
+<details span>
+<summary>Abstract</summary>
+Pixel-level fine-grained image editing remains an open challenge. Previous works fail to achieve an ideal trade-off between control granularity and inference speed. They either fail to achieve pixel-level fine-grained control, or their inference speed requires optimization. To address this, this paper for the first time employs a regression-based network to learn the variation patterns of StyleGAN latent codes during the image dragging process. This method enables pixel-level precision in dragging editing with little time cost. Users can specify handle points and their corresponding target points on any GAN-generated images, and our method will move each handle point to its corresponding target point. Through experimental analysis, we discover that a short movement distance from handle points to target points yields a high-fidelity edited image, as the model only needs to predict the movement of a small portion of pixels. To achieve this, we decompose the entire movement process into multiple sub-processes. Specifically, we develop a transformer encoder-decoder based network named 'Latent Predictor' to predict the latent code motion trajectories from handle points to target points in an autoregressive manner. Moreover, to enhance the prediction stability, we introduce a component named 'Latent Regularizer', aimed at constraining the latent code motion within the distribution of natural images. Extensive experiments demonstrate that our method achieves state-of-the-art (SOTA) inference speed and image editing performance at the pixel-level granularity.
+
+![AutoDragGAN](./imgs/AutoDragGAN.png)
+</details>
+
+---
+
+
 ### InstantDrag: Improving Interactivity in Drag-based Image Editing
 ![Publication](https://img.shields.io/badge/2024-SIGGRAPH_Asia-43aa8b) 
 [![arXiv](https://img.shields.io/badge/arXiv-2409.08857-b31b1b.svg)](https://arxiv.org/abs/2409.08857) 
@@ -533,6 +550,21 @@ We introduce DragAnything, which utilizes a entity representation to achieve mot
 
 ---
 
+### DragEntity: Trajectory Guided Video Generation using Entity and Positional Relationships
+![Publication](https://img.shields.io/badge/2024-CVPR-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2410.10751-b31b1b.svg)](https://arxiv.org/abs/2410.10751) 
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/DragEntity.pdf) 
+\
+2024-10-14\
+**Authors:** Zhang Wan, Sheng Tang, Jiawei Wei, Ruize Zhang, Juan Cao
+<details span>
+<summary>Abstract</summary>
+In recent years, diffusion models have achieved tremendous success in the field of video generation, with controllable video generation receiving significant attention. However, existing control methods still face two limitations: Firstly, control conditions (such as depth maps, 3D Mesh) are difficult for ordinary users to obtain directly. Secondly, it's challenging to drive multiple objects through complex motions with multiple trajectories simultaneously. In this paper, we introduce DragEntity, a video generation model that utilizes entity representation for controlling the motion of multiple objects. Compared to previous methods, DragEntity offers two main advantages: 1) Our method is more user-friendly for interaction because it allows users to drag entities within the image rather than individual pixels. 2) We use entity representation to represent any object in the image, and multiple objects can maintain relative spatial relationships. Therefore, we allow multiple trajectories to control multiple objects in the image with different levels of complexity simultaneously. Our experiments validate the effectiveness of DragEntity, demonstrating its excellent performance in fine-grained control in video generation.
+
+![DragEntity](./imgs/DragEntity.png)
+</details>
+
+---
 
 
 ## 3D Drag Editing for 2D Image
@@ -674,6 +706,24 @@ Large-scale generative models are capable of producing high-quality images from 
 
 ---
 
+### Masked-Attention Diffusion Guidance for Spatially Controlling Text-to-Image Generation
+![Publication](https://img.shields.io/badge/2024-The_Visual_Computer-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2308.06027-b31b1b.svg)](https://arxiv.org/abs/2308.06027) 
+[![GitHub stars](https://img.shields.io/github/stars/endo-yuki-t/MAG?logo=github&label=Stars)](https://github.com/endo-yuki-t/MAG)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://www.cgg.cs.tsukuba.ac.jp/~endo/projects/MAG/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/MAG.pdf) 
+\
+2023-08-11\
+**Authors:** Yuki Endo
+<details span>
+<summary>Abstract</summary>
+Text-to-image synthesis has achieved high-quality results with recent advances in diffusion models. However, text input alone has high spatial ambiguity and limited user controllability. Most existing methods allow spatial control through additional visual guidance (e.g., sketches and semantic masks) but require additional training with annotated images. In this paper, we propose a method for spatially controlling text-to-image generation without further training of diffusion models. Our method is based on the insight that the cross-attention maps reflect the positional relationship between words and pixels. Our aim is to control the attention maps according to given semantic masks and text prompts. To this end, we first explore a simple approach of directly swapping the cross-attention maps with constant maps computed from the semantic regions. Some prior works also allow training-free spatial control of text-to-image diffusion models by directly manipulating cross-attention maps. However, these approaches still suffer from misalignment to given masks because manipulated attention maps are far from actual ones learned by diffusion models. To address this issue, we propose masked-attention guidance, which can generate images more faithful to semantic masks via indirect control of attention to each word and pixel by manipulating noise images fed to diffusion models. Masked-attention guidance can be easily integrated into pre-trained off-the-shelf diffusion models (e.g., Stable Diffusion) and applied to the tasks of text-guided image editing. Experiments show that our method enables more accurate spatial control than baselines qualitatively and quantitatively.
+
+![MAG](./imgs/MAG.png)
+</details>
+
+---
+
 ### Motion Guidance: Diffusion-Based Image Editing with Differentiable Motion Estimators
 ![Publication](https://img.shields.io/badge/2024-ICLR-43aa8b) 
 [![arXiv](https://img.shields.io/badge/arXiv-2401.18085-b31b1b.svg)](https://arxiv.org/abs/2401.18085) 
@@ -724,6 +774,23 @@ The success of image generative models has enabled us to build methods that can 
 Diffusion models generate images with an unprecedented level of quality, but how can we freely rearrange image layouts? Recent works generate controllable scenes via learning spatially disentangled latent codes, but these methods do not apply to diffusion models due to their fixed forward process. In this work, we propose SceneDiffusion to optimize a layered scene representation during the diffusion sampling process. Our key insight is that spatial disentanglement can be obtained by jointly denoising scene renderings at different spatial layouts. Our generated scenes support a wide range of spatial editing operations, including moving, resizing, cloning, and layer-wise appearance editing operations, including object restyling and replacing. Moreover, a scene can be generated conditioned on a reference image, thus enabling object moving for in-the-wild images. Notably, this approach is training-free, compatible with general text-to-image diffusion models, and responsive in less than a second.
 
 ![MoveAnythingLayeredScene](./imgs/MoveAnythingLayeredScene.png)
+</details>
+
+---
+
+### ParamsDrag: Interactive Parameter Space Exploration via Image-Space Dragging
+![Publication](https://img.shields.io/badge/2024-IEEE_VIS-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2407.14100-b31b1b.svg)](https://arxiv.org/abs/2407.14100) 
+[![GitHub stars](https://img.shields.io/github/stars/YangL-04-20/ParamsDrag?logo=github&label=Stars)](https://github.com/YangL-04-20/ParamsDrag)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/ParamsDrag.pdf) 
+\
+2024-07-19\
+**Authors:** Guan Li, Yang Liu, Guihua Shan, Shiyu Cheng, Weiqun Cao, Junpeng Wang, Ko-Chih Wang
+<details span>
+<summary>Abstract</summary>
+Numerical simulation serves as a cornerstone in scientific modeling, yet the process of fine-tuning simulation parameters poses significant challenges. Conventionally, parameter adjustment relies on extensive numerical simulations, data analysis, and expert insights, resulting in substantial computational costs and low efficiency. The emergence of deep learning in recent years has provided promising avenues for more efficient exploration of parameter spaces. However, existing approaches often lack intuitive methods for precise parameter adjustment and optimization. To tackle these challenges, we introduce ParamsDrag, a model that facilitates parameter space exploration through direct interaction with visualizations. Inspired by DragGAN, our ParamsDrag model operates in three steps. First, the generative component of ParamsDrag generates visualizations based on the input simulation parameters. Second, by directly dragging structure-related features in the visualizations, users can intuitively understand the controlling effect of different parameters. Third, with the understanding from the earlier step, users can steer ParamsDrag to produce dynamic visual outcomes. Through experiments conducted on real-world simulations and comparisons with state-of-the-art deep learning-based approaches, we demonstrate the efficacy of our solution.
+
+![ParamsDrag](./imgs/ParamsDrag.png)
 </details>
 
 ---
