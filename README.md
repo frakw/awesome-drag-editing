@@ -192,6 +192,25 @@ Flexible and accurate drag-based editing is a challenging task that has recently
 
 ---
 
+### DiffUHaul: A Training-Free Method for Object Dragging in Images
+![Publication](https://img.shields.io/badge/2024-SIGGRAPH_Asia-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2406.01594-b31b1b.svg)](https://arxiv.org/abs/2406.01594) 
+[![GitHub stars](https://img.shields.io/github/stars/XingangPan/DragGAN?logo=github&label=Stars)](https://github.com/XingangPan/DragGAN)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://omriavrahami.com/diffuhaul/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/DiffUHaul.pdf) 
+\
+2025-06-03\
+**Authors:** Omri Avrahami, Rinon Gal, Gal Chechik, Ohad Fried, Dani Lischinski, Arash Vahdat, Weili Nie
+<details span>
+<summary>Abstract</summary>
+Text-to-image diffusion models have proven effective for solving many image editing tasks. However, the seemingly straightforward task of seamlessly relocating objects within a scene remains surprisingly challenging. Existing methods addressing this problem often struggle to function reliably in real-world scenarios due to lacking spatial reasoning. In this work, we propose a training-free method, dubbed DiffUHaul, that harnesses the spatial understanding of a localized text-to-image model, for the object dragging task. Blindly manipulating layout inputs of the localized model tends to cause low editing performance due to the intrinsic entanglement of object representation in the model. To this end, we first apply attention masking in each denoising step to make the generation more disentangled across different objects and adopt the self-attention sharing mechanism to preserve the high-level object appearance. Furthermore, we propose a new diffusion anchoring technique: in the early denoising steps, we interpolate the attention features between source and target images to smoothly fuse new layouts with the original appearance; in the later denoising steps, we pass the localized features from the source images to the interpolated images to retain fine-grained object details. To adapt DiffUHaul to real-image editing, we apply a DDPM self-attention bucketing that can better reconstruct real images with the localized model. Finally, we introduce an automated evaluation pipeline for this task and showcase the efficacy of our method. Our results are reinforced through a user preference study.
+
+![PaperTitle](./imgs/DiffUHaul.png)
+</details>
+
+---
+
+
 ### DragText: Rethinking Text Embedding in Point-based Image Editing
 ![Publication](https://img.shields.io/badge/2025-WACV-43aa8b) 
 [![arXiv](https://img.shields.io/badge/arXiv-2407.17843-b31b1b.svg)](https://arxiv.org/abs/2407.17843) 
