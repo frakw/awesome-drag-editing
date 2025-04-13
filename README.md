@@ -10,6 +10,7 @@
 - [Video Generation](#video-generation)
 - [3D Drag Editing For 2D Image](#3D-drag-editing-for-2d-image)
 - [3D Drag Editing For 3D Object](#3D-drag-editing-for-3d-object)
+- [4D Drag Editing](#4D-drag-editing)
 - [Uncategory Papers](#uncategory-papers)
 - [Datasets](#datasets)
 - [Software & Tools](#software--tools)
@@ -494,6 +495,8 @@ We introduce DragAPart, a method that, given an image and a set of drags as inpu
 ![DragAPart](./imgs/DragAPart.png)
 </details>
 
+---
+
 ### DragTraffic: Interactive and Controllable Traffic Scene Generation for Autonomous Driving
 ![Publication](https://img.shields.io/badge/2024-IROS-43aa8b) 
 [![arXiv](https://img.shields.io/badge/arXiv-2404.12624-b31b1b.svg)](https://arxiv.org/abs/2404.12624) 
@@ -586,7 +589,7 @@ We introduce DragAnything, which utilizes a entity representation to achieve mot
 ---
 
 ### DragEntity: Trajectory Guided Video Generation using Entity and Positional Relationships
-![Publication](https://img.shields.io/badge/2024-CVPR-43aa8b) 
+![Publication](https://img.shields.io/badge/2024-ACM_MM-43aa8b) 
 [![arXiv](https://img.shields.io/badge/arXiv-2410.10751-b31b1b.svg)](https://arxiv.org/abs/2410.10751) 
 [![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/DragEntity.pdf) 
 \
@@ -597,6 +600,23 @@ We introduce DragAnything, which utilizes a entity representation to achieve mot
 In recent years, diffusion models have achieved tremendous success in the field of video generation, with controllable video generation receiving significant attention. However, existing control methods still face two limitations: Firstly, control conditions (such as depth maps, 3D Mesh) are difficult for ordinary users to obtain directly. Secondly, it's challenging to drive multiple objects through complex motions with multiple trajectories simultaneously. In this paper, we introduce DragEntity, a video generation model that utilizes entity representation for controlling the motion of multiple objects. Compared to previous methods, DragEntity offers two main advantages: 1) Our method is more user-friendly for interaction because it allows users to drag entities within the image rather than individual pixels. 2) We use entity representation to represent any object in the image, and multiple objects can maintain relative spatial relationships. Therefore, we allow multiple trajectories to control multiple objects in the image with different levels of complexity simultaneously. Our experiments validate the effectiveness of DragEntity, demonstrating its excellent performance in fine-grained control in video generation.
 
 ![DragEntity](./imgs/DragEntity.png)
+</details>
+
+---
+
+
+### C-Drag: Chain-of-Thought Driven Motion Controller for Video Generation
+[![arXiv](https://img.shields.io/badge/arXiv-2502.19868-b31b1b.svg)](https://arxiv.org/abs/2502.19868) 
+[![GitHub stars](https://img.shields.io/github/stars/WesLee88524/C-Drag-Official-Repo?logo=github&label=Stars)](https://github.com/WesLee88524/C-Drag-Official-Repo)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/C-Drag.pdf) 
+\
+2025-02-27\
+**Authors:** Yuhao Li, Mirana Claire Angel, Salman Khan, Yu Zhu, Jinqiu Sun, Yanning Zhang, Fahad Shahbaz Khan
+<details span>
+<summary>Abstract</summary>
+Trajectory-based motion control has emerged as an intuitive and efficient approach for controllable video generation. However, the existing trajectory-based approaches are usually limited to only generating the motion trajectory of the controlled object and ignoring the dynamic interactions between the controlled object and its surroundings. To address this limitation, we propose a Chain-of-Thought-based motion controller for controllable video generation, named C-Drag. Instead of directly generating the motion of some objects, our C-Drag first performs object perception and then reasons the dynamic interactions between different objects according to the given motion control of the objects. Specifically, our method includes an object perception module and a Chain-of-Thought-based motion reasoning module. The object perception module employs visual language models to capture the position and category information of various objects within the image. The Chain-of-Thought-based motion reasoning module takes this information as input and conducts a stage-wise reasoning process to generate motion trajectories for each of the affected objects, which are subsequently fed to the diffusion model for video synthesis. Furthermore, we introduce a new video object interaction (VOI) dataset to evaluate the generation quality of motion controlled video generation methods. Our VOI dataset contains three typical types of interactions and provides the motion trajectories of objects that can be used for accurate performance evaluation. Experimental results show that C-Drag achieves promising performance across multiple metrics, excelling in object motion control.
+
+![C-Drag](./imgs/C-Drag.png)
 </details>
 
 ---
@@ -720,6 +740,25 @@ Recent advancements in 3D scene editing have been propelled by the rapid develop
 
 ---
 
+
+## 4D Drag Editing
+### PartRM: Modeling Part-Level Dynamics with Large Cross-State Reconstruction Model
+![Publication](https://img.shields.io/badge/2025-CVPR-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2503.19913-b31b1b.svg)](https://arxiv.org/abs/2503.19913) 
+[![GitHub stars](https://img.shields.io/github/stars/GasaiYU/PartRM?logo=github&label=Stars)](https://github.com/GasaiYU/PartRM)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://partrm.c7w.tech/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/PartRM.pdf) 
+\
+2025-03-25\
+**Authors:** Mingju Gao, Yike Pan, Huan-ang Gao, Zongzheng Zhang, Wenyi Li, Hao Dong, Hao Tang, Li Yi, Hao Zhao
+<details span>
+<summary>Abstract</summary>
+As interest grows in world models that predict future states from current observations and actions, accurately modeling part-level dynamics has become increasingly relevant for various applications. Existing approaches, such as Puppet-Master, rely on fine-tuning large-scale pre-trained video diffusion models, which are impractical for real-world use due to the limitations of 2D video representation and slow processing times. To overcome these challenges, we present PartRM, a novel 4D reconstruction framework that simultaneously models appearance, geometry, and part-level motion from multi-view images of a static object. PartRM builds upon large 3D Gaussian reconstruction models, leveraging their extensive knowledge of appearance and geometry in static objects. To address data scarcity in 4D, we introduce the PartDrag-4D dataset, providing multi-view observations of part-level dynamics across over 20,000 states. We enhance the model's understanding of interaction conditions with a multi-scale drag embedding module that captures dynamics at varying granularities. To prevent catastrophic forgetting during fine-tuning, we implement a two-stage training process that focuses sequentially on motion and appearance learning. Experimental results show that PartRM establishes a new state-of-the-art in part-level motion learning and can be applied in manipulation tasks in robotics. Our code, data, and models are publicly available to facilitate future research.
+
+![PartRM](./imgs/PartRM.png)
+</details>
+
+---
 
 ## Uncategory Papers
 
