@@ -407,6 +407,26 @@ Drag-based image editing has recently gained popularity for its interactivity an
 ![InstantDrag](./imgs/InstantDrag.png)
 </details>
 
+---
+
+### EEdit: Rethinking the Spatial and Temporal Redundancy for Efficient Image Editing
+[![arXiv](https://img.shields.io/badge/arXiv-2503.10270-b31b1b.svg)](https://arxiv.org/abs/2503.10270) 
+[![GitHub stars](https://img.shields.io/github/stars/yuriYanZeXuan/EEdit?logo=github&label=Stars)](https://github.com/yuriYanZeXuan/EEdit)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://eff-edit.github.io/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/EEdit.pdf) 
+\
+2025-03-13\
+**Authors:** Zexuan Yan, Yue Ma, Chang Zou, Wenteng Chen, Qifeng Chen, Linfeng Zhang
+<details span>
+<summary>Abstract</summary>
+Inversion-based image editing is rapidly gaining momentum while suffering from significant computation overhead, hindering its application in real-time interactive scenarios. In this paper, we rethink that the redundancy in inversion-based image editing exists in both the spatial and temporal dimensions, such as the unnecessary computation in unedited regions and the redundancy in the inversion progress. To tackle these challenges, we propose a practical framework, named EEdit, to achieve efficient image editing. Specifically, we introduce three techniques to solve them one by one. For spatial redundancy, spatial locality caching is introduced to compute the edited region and its neighboring regions while skipping the unedited regions, and token indexing preprocessing is designed to further accelerate the caching. For temporal redundancy, inversion step skipping is proposed to reuse the latent for efficient editing. Our experiments demonstrate an average of 2.46 × acceleration without performance drop in a wide range of editing tasks including prompt-guided image editing, dragging and image composition. 
+
+![EEdit](./imgs/EEdit.png)
+</details>
+
+---
+
+
 ## Novel View Perspective
 
 ### Readout Guidance: Learning Control from Diffusion Features
@@ -442,6 +462,24 @@ Point-drag-based image editing methods, like DragDiffusion, have attracted signi
 
 ![RegionDrag](./imgs/RegionDrag.png)
 </details>
+
+---
+
+### MotionDiff: Training-free Zero-shot Interactive Motion Editing via Flow-assisted Multi-view Diffusion
+[![arXiv](https://img.shields.io/badge/arXiv-2503.17695-b31b1b.svg)](https://arxiv.org/abs/2503.17695) 
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/MotionDiff.pdf) 
+\
+2025-03-22\
+**Authors:** Yikun Ma, Yiqing Li, Jiawei Wu, Xing Luo, Zhi Jin
+<details span>
+<summary>Abstract</summary>
+Generative models have made remarkable advancements and are capable of producing high-quality content. However, performing controllable editing with generative models remains challenging, due to their inherent uncertainty in outputs. This challenge is praticularly pronounced in motion editing, which involves the processing of spatial information. While some physics-based generative methods have attempted to implement motion editing, they typically operate on single-view images with simple motions, such as translation and dragging. These methods struggle to handle complex rotation and stretching motions and ensure multi-view consistency, often necessitating resource-intensive retraining. To address these challenges, we propose MotionDiff, a training-free zero-shot diffusion method that leverages optical flow for complex multi-view motion editing. Specifically, given a static scene, users can interactively select objects of interest to add motion priors. The proposed Point Kinematic Model (PKM) then estimates corresponding multi-view optical flows during the Multi-view Flow Estimation Stage (MFES). Subsequently, these optical flows are utilized to generate multi-view motion results through decoupled motion representation in the Multi-view Motion Diffusion Stage (MMDS). Extensive experiments demonstrate that MotionDiff outperforms other physics-based generative motion editing methods in achieving high-quality multi-view consistent motion results. Notably, MotionDiff does not require retraining, enabling users to conveniently adapt it for various down-stream tasks.
+
+![MotionDiff](./imgs/MotionDiff.png)
+</details>
+
+---
+
 
 ## Novel View Application
 
@@ -620,6 +658,25 @@ Trajectory-based motion control has emerged as an intuitive and efficient approa
 </details>
 
 ---
+
+
+### PoseTraj: Pose-Aware Trajectory Control in Video Diffusion
+![Publication](https://img.shields.io/badge/2025-CVPR-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2503.16068-b31b1b.svg)](https://arxiv.org/abs/2503.16068) 
+[![GitHub stars](https://img.shields.io/github/stars/robingg1/PoseTraj?logo=github&label=Stars)](https://github.com/robingg1/PoseTraj)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/PoseTraj.pdf) 
+\
+2025-03-20\
+**Authors:** Longbin Ji, Lei Zhong, Pengfei Wei, Changjian Li
+<details span>
+<summary>Abstract</summary>
+Recent advancements in trajectory-guided video generation have achieved notable progress. However, existing models still face challenges in generating object motions with potentially changing 6D poses under wide-range rotations, due to limited 3D understanding. To address this problem, we introduce PoseTraj, a pose-aware video dragging model for generating 3D-aligned motion from 2D trajectories. Our method adopts a novel two-stage pose-aware pretraining framework, improving 3D understanding across diverse trajectories. Specifically, we propose a large-scale synthetic dataset PoseTraj-10K, containing 10k videos of objects following rotational trajectories, and enhance the model perception of object pose changes by incorporating 3D bounding boxes as intermediate supervision signals. Following this, we fine-tune the trajectory-controlling module on real-world videos, applying an additional camera-disentanglement module to further refine motion accuracy. Experiments on various benchmark datasets demonstrate that our method not only excels in 3D pose-aligned dragging for rotational trajectories but also outperforms existing baselines in trajectory accuracy and video quality.
+
+![PoseTraj](./imgs/PoseTraj.png)
+</details>
+
+---
+
 
 
 ## 3D Drag Editing for 2D Image
