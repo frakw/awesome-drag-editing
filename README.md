@@ -301,6 +301,22 @@ Recently, several point-based image editing methods (e.g., DragDiffusion, FreeDr
 
 ---
 
+### Training-free Dense-Aligned Diffusion Guidance for Modular Conditional Image Synthesis (DADG)
+![Publication](https://img.shields.io/badge/2025-CVPR-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2504.01515-b31b1b.svg)](https://arxiv.org/abs/2504.01515) 
+[![GitHub stars](https://img.shields.io/github/stars/ZixuanWang0525/DADG?logo=github&label=Stars)](https://github.com/ZixuanWang0525/DADG)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/DADG.pdf) 
+\
+2025-04-02\
+**Authors:** Zixuan Wang, Duo Peng, Feng Chen, Yuwei Yang, Yinjie Lei
+<details span>
+<summary>Abstract</summary>
+Conditional image synthesis is a crucial task with broad applications, such as artistic creation and virtual reality. However, current generative methods are often task-oriented with a narrow scope, handling a restricted condition with constrained applicability. In this paper, we propose a novel approach that treats conditional image synthesis as the modular combination of diverse fundamental condition units. Specifically, we divide conditions into three primary units: text, layout, and drag. To enable effective control over these conditions, we design a dedicated alignment module for each. For the text condition, we introduce a Dense Concept Alignment (DCA) module, which achieves dense visual-text alignment by drawing on diverse textual concepts. For the layout condition, we propose a Dense Geometry Alignment (DGA) module to enforce comprehensive geometric constraints that preserve the spatial configuration. For the drag condition, we introduce a Dense Motion Alignment (DMA) module to apply multi-level motion regularization, ensuring that each pixel follows its desired trajectory without visual artifacts. By flexibly inserting and combining these alignment modules, our framework enhances the model's adaptability to diverse conditional generation tasks and greatly expands its application range. Extensive experiments demonstrate the superior performance of our framework across a variety of conditions, including textual description, segmentation mask (bounding box), drag manipulation, and their combinations.
+
+![DADG](./imgs/DADG.png)
+</details>
+
+---
 
 
 ## Performance Improvement
@@ -461,6 +477,22 @@ We present Readout Guidance, a method for controlling text-to-image diffusion mo
 Point-drag-based image editing methods, like DragDiffusion, have attracted significant attention. However, point-drag-based approaches suffer from computational overhead and misinterpretation of user intentions due to the sparsity of point-based editing instructions. In this paper, we propose a region-based copy-and-paste dragging method, RegionDrag, to overcome these limitations. RegionDrag allows users to express their editing instructions in the form of handle and target regions, enabling more precise control and alleviating ambiguity. In addition, region-based operations complete editing in one iteration and are much faster than point-drag-based methods. We also incorporate the attention-swapping technique for enhanced stability during editing. To validate our approach, we extend existing point-drag-based datasets with region-based dragging instructions. Experimental results demonstrate that RegionDrag outperforms existing point-drag-based approaches in terms of speed, accuracy, and alignment with user intentions. Remarkably, RegionDrag completes the edit on an image with a resolution of 512x512 in less than 2 seconds, which is more than 100x faster than DragDiffusion, while achieving better performance. 
 
 ![RegionDrag](./imgs/RegionDrag.png)
+</details>
+
+---
+
+### FramePainter: Endowing Interactive Image Editing with Video Diffusion Priors
+[![arXiv](https://img.shields.io/badge/arXiv-2501.08225-b31b1b.svg)](https://arxiv.org/abs/2501.08225) 
+[![GitHub stars](https://img.shields.io/github/stars/YBYBZhang/FramePainter?logo=github&label=Stars)](https://github.com/YBYBZhang/FramePainter)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/FramePainter.pdf) 
+\
+2025-01-14\
+**Authors:** Yabo Zhang, Xinpeng Zhou, Yihan Zeng, Hang Xu, Hui Li, Wangmeng Zuo
+<details span>
+<summary>Abstract</summary>
+Interactive image editing allows users to modify images through visual interaction operations such as drawing, clicking, and dragging. Existing methods construct such supervision signals from videos, as they capture how objects change with various physical interactions. However, these models are usually built upon text-to-image diffusion models, so necessitate (i) massive training samples and (ii) an additional reference encoder to learn real-world dynamics and visual consistency. In this paper, we reformulate this task as an image-to-video generation problem, so that inherit powerful video diffusion priors to reduce training costs and ensure temporal consistency. Specifically, we introduce FramePainter as an efficient instantiation of this formulation. Initialized with Stable Video Diffusion, it only uses a lightweight sparse control encoder to inject editing signals. Considering the limitations of temporal attention in handling large motion between two frames, we further propose matching attention to enlarge the receptive field while encouraging dense correspondence between edited and source image tokens. We highlight the effectiveness and efficiency of FramePainter across various of editing signals: it domainantly outperforms previous state-of-the-art methods with far less training data, achieving highly seamless and coherent editing of images, \eg, automatically adjust the reflection of the cup. Moreover, FramePainter also exhibits exceptional generalization in scenarios not present in real-world videos, \eg, transform the clownfish into shark-like shape. 
+
+![FramePainter](./imgs/FramePainter.png)
 </details>
 
 ---
@@ -642,6 +674,41 @@ In recent years, diffusion models have achieved tremendous success in the field 
 
 ---
 
+### OmniDrag: Enabling Motion Control for Omnidirectional Image-to-Video Generation
+[![arXiv](https://img.shields.io/badge/arXiv-2412.09623-b31b1b.svg)](https://arxiv.org/abs/2412.09623) 
+[![GitHub stars](https://img.shields.io/github/stars/lwq20020127/OmniDrag?logo=github&label=Stars)](https://github.com/lwq20020127/OmniDrag)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://lwq20020127.github.io/OmniDrag/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/OmniDrag.pdf) 
+\
+2024-12-12\
+**Authors:** Weiqi Li, Shijie Zhao, Chong Mou, Xuhan Sheng, Zhenyu Zhang, Qian Wang, Junlin Li, Li Zhang, Jian Zhang
+<details span>
+<summary>Abstract</summary>
+As virtual reality gains popularity, the demand for controllable creation of immersive and dynamic omnidirectional videos (ODVs) is increasing. While previous text-to-ODV generation methods achieve impressive results, they struggle with content inaccuracies and inconsistencies due to reliance solely on textual inputs. Although recent motion control techniques provide fine-grained control for video generation, directly applying these methods to ODVs often results in spatial distortion and unsatisfactory performance, especially with complex spherical motions. To tackle these challenges, we propose OmniDrag, the first approach enabling both scene- and object-level motion control for accurate, high-quality omnidirectional image-to-video generation. Building on pretrained video diffusion models, we introduce an omnidirectional control module, which is jointly fine-tuned with temporal attention layers to effectively handle complex spherical motion. In addition, we develop a novel spherical motion estimator that accurately extracts motion-control signals and allows users to perform drag-style ODV generation by simply drawing handle and target points. We also present a new dataset, named Move360, addressing the scarcity of ODV data with large scene and object motions. Experiments demonstrate the significant superiority of OmniDrag in achieving holistic scene-level and fine-grained object-level control for ODV generation.
+
+![OmniDrag](./imgs/OmniDrag.png)
+</details>
+
+---
+
+
+### LeviTor: 3D Trajectory Oriented Image-to-Video Synthesis
+[![arXiv](https://img.shields.io/badge/arXiv-2412.15214-b31b1b.svg)](https://arxiv.org/abs/2412.15214) 
+[![GitHub stars](https://img.shields.io/github/stars/ant-research/LeviTor?logo=github&label=Stars)](https://github.com/ant-research/LeviTor)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/LeviTor.pdf) 
+\
+2024-12-19\
+**Authors:** Hanlin Wang, Hao Ouyang, Qiuyu Wang, Wen Wang, Ka Leong Cheng, Qifeng Chen, Yujun Shen, Limin Wang
+<details span>
+<summary>Abstract</summary>
+The intuitive nature of drag-based interaction has led to its growing adoption for controlling object trajectories in image-to-video synthesis. Still, existing methods that perform dragging in the 2D space usually face ambiguity when handling out-of-plane movements. In this work, we augment the interaction with a new dimension, i.e., the depth dimension, such that users are allowed to assign a relative depth for each point on the trajectory. That way, our new interaction paradigm not only inherits the convenience from 2D dragging, but facilitates trajectory control in the 3D space, broadening the scope of creativity. We propose a pioneering method for 3D trajectory control in image-to-video synthesis by abstracting object masks into a few cluster points. These points, accompanied by the depth information and the instance information, are finally fed into a video diffusion model as the control signal. Extensive experiments validate the effectiveness of our approach, dubbed LeviTor, in precisely manipulating the object movements when producing photo-realistic videos from static images.
+
+![LeviTor](./imgs/LeviTor.png)
+</details>
+
+---
+
+
 
 ### C-Drag: Chain-of-Thought Driven Motion Controller for Video Generation
 [![arXiv](https://img.shields.io/badge/arXiv-2502.19868-b31b1b.svg)](https://arxiv.org/abs/2502.19868) 
@@ -797,6 +864,22 @@ Recent advancements in 3D scene editing have been propelled by the rapid develop
 
 ---
 
+### Dragen3D: Multiview Geometry Consistent 3D Gaussian Generation with Drag-Based Control
+[![arXiv](https://img.shields.io/badge/arXiv-2502.16475-b31b1b.svg)](https://arxiv.org/abs/2502.16475) 
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/Dragen3D.pdf) 
+\
+2025-02-23\
+**Authors:** Jinbo Yan, Alan Zhao, Yixin Hu
+<details span>
+<summary>Abstract</summary>
+Single-image 3D generation has emerged as a prominent research topic, playing a vital role in virtual reality, 3D modeling, and digital content creation. However, existing methods face challenges such as a lack of multi-view geometric consistency and limited controllability during the generation process, which significantly restrict their usability. % To tackle these challenges, we introduce Dragen3D, a novel approach that achieves geometrically consistent and controllable 3D generation leveraging 3D Gaussian Splatting (3DGS). We introduce the Anchor-Gaussian Variational Autoencoder (Anchor-GS VAE), which encodes a point cloud and a single image into anchor latents and decode these latents into 3DGS, enabling efficient latent-space generation. To enable multi-view geometry consistent and controllable generation, we propose a Seed-Point-Driven strategy: first generate sparse seed points as a coarse geometry representation, then map them to anchor latents via the Seed-Anchor Mapping Module. Geometric consistency is ensured by the easily learned sparse seed points, and users can intuitively drag the seed points to deform the final 3DGS geometry, with changes propagated through the anchor latents. To the best of our knowledge, we are the first to achieve geometrically controllable 3D Gaussian generation and editing without relying on 2D diffusion priors, delivering comparable 3D generation quality to state-of-the-art methods.
+
+![Dragen3D](./imgs/Dragen3D.png)
+</details>
+
+---
+
+
 
 ## 4D Drag Editing
 ### PartRM: Modeling Part-Level Dynamics with Large Cross-State Reconstruction Model
@@ -925,6 +1008,22 @@ Numerical simulation serves as a cornerstone in scientific modeling, yet the pro
 </details>
 
 ---
+
+### DreamOmni: Unified Image Generation and Editing
+[![arXiv](https://img.shields.io/badge/arXiv-2412.17098-b31b1b.svg)](https://arxiv.org/abs/2412.17098) 
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/DreamOmni.pdf) 
+\
+2024-12-22\
+**Authors:** Bin Xia, Yuechen Zhang, Jingyao Li, Chengyao Wang, Yitong Wang, Xinglong Wu, Bei Yu, Jiaya Jia
+<details span>
+<summary>Abstract</summary>
+Currently, the success of large language models (LLMs) illustrates that a unified multitasking approach can significantly enhance model usability, streamline deployment, and foster synergistic benefits across different tasks. However, in computer vision, while text-to-image (T2I) models have significantly improved generation quality through scaling up, their framework design did not initially consider how to unify with downstream tasks, such as various types of editing. To address this, we introduce DreamOmni, a unified model for image generation and editing. We begin by analyzing existing frameworks and the requirements of downstream tasks, proposing a unified framework that integrates both T2I models and various editing tasks. Furthermore, another key challenge is the efficient creation of high-quality editing data, particularly for instruction-based and drag-based editing. To this end, we develop a synthetic data pipeline using sticker-like elements to synthesize accurate, high-quality datasets efficiently, which enables editing data scaling up for unified model training. For training, DreamOmni jointly trains T2I generation and downstream tasks. T2I training enhances the model's understanding of specific concepts and improves generation quality, while editing training helps the model grasp the nuances of the editing task. This collaboration significantly boosts editing performance. Extensive experiments confirm the effectiveness of DreamOmni.
+
+![DreamOmni](./imgs/DreamOmni.png)
+</details>
+
+---
+
 
 
 
