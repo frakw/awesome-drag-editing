@@ -1009,6 +1009,24 @@ Numerical simulation serves as a cornerstone in scientific modeling, yet the pro
 
 ---
 
+### Motion Prompting: Controlling Video Generation with Motion Trajectories
+![Publication](https://img.shields.io/badge/2025-CVPR-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2412.02700-b31b1b.svg)](https://arxiv.org/abs/2412.02700) 
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://motion-prompting.github.io/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/MotionPrompting.pdf) 
+\
+2024-12-03\
+**Authors:** Daniel Geng, Charles Herrmann, Junhwa Hur, Forrester Cole, Serena Zhang, Tobias Pfaff, Tatiana Lopez-Guevara, Carl Doersch, Yusuf Aytar, Michael Rubinstein, Chen Sun, Oliver Wang, Andrew Owens, Deqing Sun
+<details span>
+<summary>Abstract</summary>
+Motion control is crucial for generating expressive and compelling video content; however, most existing video generation models rely mainly on text prompts for control, which struggle to capture the nuances of dynamic actions and temporal compositions. To this end, we train a video generation model conditioned on spatio-temporally sparse or dense motion trajectories. In contrast to prior motion conditioning work, this flexible representation can encode any number of trajectories, object-specific or global scene motion, and temporally sparse motion; due to its flexibility we refer to this conditioning as motion prompts. While users may directly specify sparse trajectories, we also show how to translate high-level user requests into detailed, semi-dense motion prompts, a process we term motion prompt expansion. We demonstrate the versatility of our approach through various applications, including camera and object motion control, "interacting" with an image, motion transfer, and image editing. Our results showcase emergent behaviors, such as realistic physics, suggesting the potential of motion prompts for probing video models and interacting with future generative world models. Finally, we evaluate quantitatively, conduct a human study, and demonstrate strong performance. 
+
+![MotionPrompting](./imgs/MotionPrompting.png)
+</details>
+
+---
+
+
 ### DreamOmni: Unified Image Generation and Editing
 [![arXiv](https://img.shields.io/badge/arXiv-2412.17098-b31b1b.svg)](https://arxiv.org/abs/2412.17098) 
 [![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/DreamOmni.pdf) 
