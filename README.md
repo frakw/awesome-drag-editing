@@ -622,6 +622,24 @@ Video editing is a challenging task that requires manipulating videos on both th
 
 ---
 
+### VideoHandles: Editing 3D Object Compositions in Videos Using Video Generative Priors
+![Publication](https://img.shields.io/badge/2025-CVPR-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2503.01107-b31b1b.svg)](https://arxiv.org/abs/2503.01107) 
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://videohandles.github.io/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/VideoHandles.pdf) 
+\
+2025-03-03\
+**Authors:** Juil Koo, Paul Guerrero, Chun-Hao Paul Huang, Duygu Ceylan, Minhyuk Sung
+<details span>
+<summary>Abstract</summary>
+Generative methods for image and video editing use generative models as priors to perform edits despite incomplete information, such as changing the composition of 3D objects shown in a single image. Recent methods have shown promising composition editing results in the image setting, but in the video setting, editing methods have focused on editing object's appearance and motion, or camera motion, and as a result, methods to edit object composition in videos are still missing. We propose \name as a method for editing 3D object compositions in videos of static scenes with camera motion. Our approach allows editing the 3D position of a 3D object across all frames of a video in a temporally consistent manner. This is achieved by lifting intermediate features of a generative model to a 3D reconstruction that is shared between all frames, editing the reconstruction, and projecting the features on the edited reconstruction back to each frame. To the best of our knowledge, this is the first generative approach to edit object compositions in videos. Our approach is simple and training-free, while outperforming state-of-the-art image editing baselines.
+
+![VideoHandles](./imgs/VideoHandles.png)
+</details>
+
+---
+
+
 ## Video Generation
 ### DragNUWA: Fine-grained Control in Video Generation by Integrating Text, Image, and Trajectory
 [![arXiv](https://img.shields.io/badge/arXiv-2308.08089-b31b1b.svg)](https://arxiv.org/abs/2308.08089) 
