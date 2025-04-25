@@ -897,6 +897,22 @@ Single-image 3D generation has emerged as a prominent research topic, playing a 
 
 ---
 
+### ARAP-GS: Drag-driven As-Rigid-As-Possible 3D Gaussian Splatting Editing with Diffusion Prior
+[![arXiv](https://img.shields.io/badge/arXiv-2504.12788-b31b1b.svg)](https://arxiv.org/abs/2504.12788) 
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/ARAP-GS.pdf) 
+\
+2025-04-17\
+**Authors:** Xiao Han, Runze Tian, Yifei Tong, Fenggen Yu, Dingyao Liu, Yan Zhang
+<details span>
+<summary>Abstract</summary>
+Drag-driven editing has become popular among designers for its ability to modify complex geometric structures through simple and intuitive manipulation, allowing users to adjust and reshape content with minimal technical skill. This drag operation has been incorporated into numerous methods to facilitate the editing of 2D images and 3D meshes in design. However, few studies have explored drag-driven editing for the widely-used 3D Gaussian Splatting (3DGS) representation, as deforming 3DGS while preserving shape coherence and visual continuity remains challenging. In this paper, we introduce ARAP-GS, a drag-driven 3DGS editing framework based on As-Rigid-As-Possible (ARAP) deformation. Unlike previous 3DGS editing methods, we are the first to apply ARAP deformation directly to 3D Gaussians, enabling flexible, drag-driven geometric transformations. To preserve scene appearance after deformation, we incorporate an advanced diffusion prior for image super-resolution within our iterative optimization process. This approach enhances visual quality while maintaining multi-view consistency in the edited results. Experiments show that ARAP-GS outperforms current methods across diverse 3D scenes, demonstrating its effectiveness and superiority for drag-driven 3DGS editing. Additionally, our method is highly efficient, requiring only 10 to 20 minutes to edit a scene on a single RTX 3090 GPU.
+
+![ARAP-GS](./imgs/ARAP-GS.png)
+</details>
+
+---
+
+
 
 
 ## 4D Drag Editing
