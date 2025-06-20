@@ -301,6 +301,25 @@ Recently, several point-based image editing methods (e.g., DragDiffusion, FreeDr
 
 ---
 
+### GDrag:Towards General-Purpose Interactive Editing with Anti-ambiguity Point Diffusion
+![Publication](https://img.shields.io/badge/2025-ICLR-43aa8b) 
+[![openreview](https://img.shields.io/badge/OpenReview-8G3FyfHIko-b31b1b.svg)](https://openreview.net/forum?id=8G3FyfHIko) 
+[![GitHub stars](https://img.shields.io/github/stars/DaDaY-coder/GDrag?logo=github&label=Stars)](https://github.com/DaDaY-coder/GDrag)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://iclr.cc/virtual/2025/poster/30776)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](https://openreview.net/pdf?id=8G3FyfHIko) 
+\
+2025-01-23\
+**Authors:** Xiaojian Lin, Hanhui Li, Yuhao Cheng, Yiqiang Yan, Xiaodan Liang
+<details span>
+<summary>Abstract</summary>
+Recent interactive point-based image manipulation methods have gained considerable attention for being user-friendly. However, these methods still face two types of ambiguity issues that can lead to unsatisfactory outcomes, namely, intention ambiguity which misinterprets the purposes of users, and content ambiguity where target image areas are distorted by distracting elements. To address these issues and achieve general-purpose manipulations, we propose a novel task-aware, training-free framework called GDrag. Specifically, GDrag defines a taxonomy of atomic manipulations, which can be parameterized and combined unitedly to represent complex manipulations, thereby reducing intention ambiguity. Furthermore, GDrag introduces two strategies to mitigate content ambiguity, including an anti-ambiguity dense trajectory calculation method (ADT) and a self-adaptive motion supervision method (SMS). Given an atomic manipulation, ADT converts the sparse user-defined handle points into a dense point set by selecting their semantic and geometric neighbors, and calculates the trajectory of the point set. Unlike previous motion supervision methods relying on a single global scale for low-rank adaption, SMS jointly optimizes point-wise adaption scales and latent feature biases. These two methods allow us to model fine-grained target contexts and generate precise trajectories. As a result, GDrag consistently produces precise and appealing results in different editing tasks. Extensive experiments on the challenging DragBench dataset demonstrate that GDrag outperforms state-of-the-art methods significantly. 
+
+![GDrag](./imgs/GDrag.png)
+</details>
+
+---
+
+
 ### Training-free Dense-Aligned Diffusion Guidance for Modular Conditional Image Synthesis (DADG)
 ![Publication](https://img.shields.io/badge/2025-CVPR-43aa8b) 
 [![arXiv](https://img.shields.io/badge/arXiv-2504.01515-b31b1b.svg)](https://arxiv.org/abs/2504.01515) 
@@ -317,6 +336,40 @@ Conditional image synthesis is a crucial task with broad applications, such as a
 </details>
 
 ---
+
+### DragLoRA: Online Optimization of LoRA Adapters for Drag-based Image Editing in Diffusion Model
+![Publication](https://img.shields.io/badge/2025-ICML-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2505.12427-b31b1b.svg)](https://arxiv.org/abs/2505.12427) 
+[![GitHub stars](https://img.shields.io/github/stars/Sylvie-X/DragLoRA?logo=github&label=Stars)](https://github.com/Sylvie-X/DragLoRA)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](https://arxiv.org/pdf/2505.12427) 
+\
+2025-05-18\
+**Authors:** Siwei Xia, Li Sun, Tiantian Sun, Qingli Li
+<details span>
+<summary>Abstract</summary>
+Drag-based editing within pretrained diffusion model provides a precise and flexible way to manipulate foreground objects. Traditional methods optimize the input feature obtained from DDIM inversion directly, adjusting them iteratively to guide handle points towards target locations. However, these approaches often suffer from limited accuracy due to the low representation ability of the feature in motion supervision, as well as inefficiencies caused by the large search space required for point tracking. To address these limitations, we present DragLoRA, a novel framework that integrates LoRA (Low-Rank Adaptation) adapters into the drag-based editing pipeline. To enhance the training of LoRA adapters, we introduce an additional denoising score distillation loss which regularizes the online model by aligning its output with that of the original model. Additionally, we improve the consistency of motion supervision by adapting the input features using the updated LoRA, giving a more stable and accurate input feature for subsequent operations. Building on this, we design an adaptive optimization scheme that dynamically toggles between two modes, prioritizing efficiency without compromising precision. Extensive experiments demonstrate that DragLoRA significantly enhances the control precision and computational efficiency for drag-based image editing.
+
+![DragLoRA](./imgs/DragLoRA.png)
+</details>
+
+---
+
+### DragNeXt: Rethinking Drag-Based Image Editing
+[![arXiv](https://img.shields.io/badge/arXiv-2506.07611-b31b1b.svg)](https://arxiv.org/abs/2506.07611) 
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](https://www.arxiv.org/pdf/2506.07611) 
+\
+2025-06-09\
+**Authors:** Yuan Zhou, Junbao Zhou, Qingshan Xu, Kesen Zhao, Yuxuan Wang, Hao Fei, Richang Hong, Hanwang Zhang
+<details span>
+<summary>Abstract</summary>
+Drag-Based Image Editing (DBIE), which allows users to manipulate images by directly dragging objects within them, has recently attracted much attention from the community. However, it faces two key challenges: (\emph{\textcolor{magenta}{i}}) point-based drag is often highly ambiguous and difficult to align with users' intentions; (\emph{\textcolor{magenta}{ii}}) current DBIE methods primarily rely on alternating between motion supervision and point tracking, which is not only cumbersome but also fails to produce high-quality results. These limitations motivate us to explore DBIE from a new perspective -- redefining it as deformation, rotation, and translation of user-specified handle regions. Thereby, by requiring users to explicitly specify both drag areas and types, we can effectively address the ambiguity issue. Furthermore, we propose a simple-yet-effective editing framework, dubbed \textcolor{SkyBlue}{\textbf{DragNeXt}}. It unifies DBIE as a Latent Region Optimization (LRO) problem and solves it through Progressive Backward Self-Intervention (PBSI), simplifying the overall procedure of DBIE while further enhancing quality by fully leveraging region-level structure information and progressive guidance from intermediate drag states. We validate \textcolor{SkyBlue}{\textbf{DragNeXt}} on our NextBench, and extensive experiments demonstrate that our proposed method can significantly outperform existing approaches. 
+
+![DragNeXt](./imgs/DragNeXt.png)
+</details>
+
+---
+
+
 
 
 ## Performance Improvement
