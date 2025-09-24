@@ -369,6 +369,81 @@ Drag-Based Image Editing (DBIE), which allows users to manipulate images by dire
 
 ---
 
+### AttentionDrag: Exploiting Latent Correlation Knowledge in Pre-trained Diffusion Models for Image Editing
+![Publication](https://img.shields.io/badge/2025-IJCAI-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2506.13301-b31b1b.svg)](https://arxiv.org/abs/2506.13301) 
+[![GitHub stars](https://img.shields.io/github/stars/GPlaying/AttentionDrag?logo=github&label=Stars)](https://github.com/GPlaying/AttentionDrag)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](https://arxiv.org/pdf/2506.13301) 
+\
+2025-06-16\
+**Authors:** Biao Yang, Muqi Huang, Yuhui Zhang, Yun Xiong, Kun Zhou, Xi Chen, Shiyang Zhou, Huishuai Bao, Chuan Li, Feng Shi, Hualei Liu
+<details span>
+<summary>Abstract</summary>
+Traditional point-based image editing methods rely on iterative latent optimization or geometric transformations, which are either inefficient in their processing or fail to capture the semantic relationships within the image. These methods often overlook the powerful yet underutilized image editing capabilities inherent in pre-trained diffusion models. In this work, we propose a novel one-step point-based image editing method, named AttentionDrag, which leverages the inherent latent knowledge and feature correlations within pre-trained diffusion models for image editing tasks. This framework enables semantic consistency and high-quality manipulation without the need for extensive re-optimization or retraining. Specifically, we reutilize the latent correlations knowledge learned by the self-attention mechanism in the U-Net module during the DDIM inversion process to automatically identify and adjust relevant image regions, ensuring semantic validity and consistency. Additionally, AttentionDrag adaptively generates masks to guide the editing process, enabling precise and context-aware modifications with friendly interaction. Our results demonstrate a performance that surpasses most state-of-the-art methods with significantly faster speeds, showing a more efficient and semantically coherent solution for point-based image editing tasks.
+
+![AttentionDrag](./imgs/AttentionDrag.png)
+</details>
+
+---
+
+
+
+### FlowDrag: 3D-aware Drag-based Image Editing with Mesh-guided Deformation Vector Flow Fields
+![Publication](https://img.shields.io/badge/2025-ICML-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2507.08285-b31b1b.svg)](https://arxiv.org/abs/2507.08285) 
+[![GitHub stars](https://img.shields.io/github/stars/kookie12/FlowDrag?logo=github&label=Stars)](https://github.com/kookie12/FlowDrag)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://icml.cc/virtual/2025/poster/43848)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](https://arxiv.org/pdf/2507.08285) 
+\
+2025-07-11\
+**Authors:** Gwanhyeong Koo, Sunjae Yoon, Younghwan Lee, Ji Woo Hong, Chang D. Yoo
+<details span>
+<summary>Abstract</summary>
+Drag-based editing allows precise object manipulation through point-based control, offering user convenience. However, current methods often suffer from a geometric inconsistency problem by focusing exclusively on matching user-defined points, neglecting the broader geometry and leading to artifacts or unstable edits. We propose FlowDrag, which leverages geometric information for more accurate and coherent transformations. Our approach constructs a 3D mesh from the image, using an energy function to guide mesh deformation based on user-defined drag points. The resulting mesh displacements are projected into 2D and incorporated into a UNet denoising process, enabling precise handle-to-target point alignment while preserving structural integrity. Additionally, existing drag-editing benchmarks provide no ground truth, making it difficult to assess how accurately the edits match the intended transformations. To address this, we present VFD (VidFrameDrag) benchmark dataset, which provides ground-truth frames using consecutive shots in a video dataset. FlowDrag outperforms existing drag-based editing methods on both VFD Bench and DragBench.
+
+![FlowDrag](./imgs/FlowDrag.png)
+</details>
+
+---
+
+### AdaINDrag: AdaIN-Driven Point-Based Image Editing via Style-Guided Feature Optimization
+![Publication](https://img.shields.io/badge/SSRN-43aa8b) 
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5374804)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](https://papers.ssrn.com/sol3/Delivery.cfm/b65b97d8-c562-47ca-9cdb-975637f0a88c-MECA.pdf?abstractid=5374804&mirid=1&type=2) 
+\
+2025-07-31\
+**Authors:** Fei Lin, Yufeng Dong, Cong Zhang
+<details span>
+<summary>Abstract</summary>
+Precise and flexible image editing remains a central challenge in computer vision. Recent advances
+in point-based interactive editing have enabled fine-grained image manipulation using sparse user-defined control points. DragDiffusion[36] pioneered the integration of diffusion models into this paradigm by leveraging latent space optimization to drive continuous structural transformations. However, its global optimization strategy often compromises semantic consistency and fine details. To address these limitations, we propose AdaINDrag, a novel framework that incorporates style alignment mechanisms into two critical stages of the diffusion process. During the latent optimization phase, we introduce a style-guided module that aligns the intermediate U-Net features with the original image’s style distribution, enhancing local semantic consistency under point-based guidance. In the subsequent denoising phase, we apply adaptive instance normalization to modulate key features within the attention mechanism, promoting better preservation of both image content and stylistic fidelity. Extensive experiments demonstrate that our method outperforms existing approaches in drag precision and image fidelity, delivering improved robustness and interactive efficiency for point-based image editing.
+
+
+![AdaINDrag](./imgs/AdaINDrag.png)
+</details>
+
+---
+
+### LazyDrag: Enabling Stable Drag-Based Editing on Multi-Modal Diffusion Transformers via Explicit Correspondence
+[![arXiv](https://img.shields.io/badge/arXiv-2509.12203-b31b1b.svg)](https://arxiv.org/abs/2509.12203) 
+[![GitHub stars](https://img.shields.io/github/stars/zxYin/LazyDrag?logo=github&label=Stars)](https://github.com/zxYin/LazyDrag)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://zxyin.github.io/LazyDrag/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](https://arxiv.org/pdf/2509.12203) 
+\
+2025-09-15\
+**Authors:** Zixin Yin, Xili Dai, Duomin Wang, Xianfang Zeng, Lionel M. Ni, Gang Yu, Heung-Yeung Shum
+<details span>
+<summary>Abstract</summary>
+The reliance on implicit point matching via attention has become a core bottleneck in drag-based editing, resulting in a fundamental compromise on weakened inversion strength and costly test-time optimization (TTO). This compromise severely limits the generative capabilities of diffusion models, suppressing high-fidelity inpainting and text-guided creation. In this paper, we introduce LazyDrag, the first drag-based image editing method for Multi-Modal Diffusion Transformers, which directly eliminates the reliance on implicit point matching. In concrete terms, our method generates an explicit correspondence map from user drag inputs as a reliable reference to boost the attention control. This reliable reference opens the potential for a stable full-strength inversion process, which is the first in the drag-based editing task. It obviates the necessity for TTO and unlocks the generative capability of models. Therefore, LazyDrag naturally unifies precise geometric control with text guidance, enabling complex edits that were previously out of reach: opening the mouth of a dog and inpainting its interior, generating new objects like a ``tennis ball'', or for ambiguous drags, making context-aware changes like moving a hand into a pocket. Additionally, LazyDrag supports multi-round workflows with simultaneous move and scale operations. Evaluated on the DragBench, our method outperforms baselines in drag accuracy and perceptual quality, as validated by VIEScore and human evaluation. LazyDrag not only establishes new state-of-the-art performance, but also paves a new way to editing paradigms.
+
+![LazyDrag](./imgs/LazyDrag.png)
+</details>
+
+---
+
+
+
+
 
 
 
@@ -564,6 +639,25 @@ Generative models have made remarkable advancements and are capable of producing
 </details>
 
 ---
+
+### Inpaint4Drag: Repurposing Inpainting Models for Drag-Based Image Editing via Bidirectional Warping
+![Publication](https://img.shields.io/badge/2025-ICCV-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2509.04582-b31b1b.svg)](https://arxiv.org/abs/2509.04582) 
+[![GitHub stars](https://img.shields.io/github/stars/Visual-AI/Inpaint4Drag?logo=github&label=Stars)](https://github.com/Visual-AI/Inpaint4Drag)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://visual-ai.github.io/inpaint4drag/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](https://arxiv.org/pdf/2509.04582) 
+\
+2025-09-04\
+**Authors:** Jingyi Lu, Kai Han
+<details span>
+<summary>Abstract</summary>
+Drag-based image editing has emerged as a powerful paradigm for intuitive image manipulation. However, existing approaches predominantly rely on manipulating the latent space of generative models, leading to limited precision, delayed feedback, and model-specific constraints. Accordingly, we present Inpaint4Drag, a novel framework that decomposes drag-based editing into pixel-space bidirectional warping and image inpainting. Inspired by elastic object deformation in the physical world, we treat image regions as deformable materials that maintain natural shape under user manipulation. Our method achieves real-time warping previews (0.01s) and efficient inpainting (0.3s) at 512x512 resolution, significantly improving the interaction experience compared to existing methods that require minutes per edit. By transforming drag inputs directly into standard inpainting formats, our approach serves as a universal adapter for any inpainting model without architecture modification, automatically inheriting all future improvements in inpainting technology. Extensive experiments demonstrate that our method achieves superior visual quality and precise control while maintaining real-time performance.
+
+![Inpaint4Drag](./imgs/Inpaint4Drag.png)
+</details>
+
+---
+
 
 
 ## Novel View Application
