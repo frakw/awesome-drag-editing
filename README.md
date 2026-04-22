@@ -441,6 +441,39 @@ The reliance on implicit point matching via attention has become a core bottlene
 
 ---
 
+### ContextDrag: Precise Drag-Based Image Editing via Context-Preserving Token Injection and Position-Aligned Attention
+[![arXiv](https://img.shields.io/badge/arXiv-2512.08477-b31b1b.svg)](https://arxiv.org/abs/2512.08477) 
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](https://arxiv.org/pdf/2512.08477) 
+\
+2025-12-09\
+**Authors:** Huiguo He, Pengyu Yan, Ziqi Yi, Weizhi Zhong, Zheng Liu, Yejun Tang, Huan Yang, Guanbin Li, Lianwen Jin
+<details span>
+<summary>Abstract</summary>
+Drag-based image editing enables intuitive visual manipulation through point-based drag operations. Existing methods mainly rely on diffusion inversion or pixel-space warping with inpainting. However, inversion inherently introduces approximation errors that degrade texture fidelity, whereas rigid pixel-space operations discard semantic context and produce unnatural deformations. To address these issues, we introduce ContextDrag, to our knowledge the first framework that brings drag-based manipulation into the in-context image editing paradigm. By leveraging the in-context capabilities of editing models (e.g., FLUX-Kontext), ContextDrag enables precise drag editing without inversion or fine-tuning. Specifically, we first propose Context-preserving Token Injection (CTI), which injects VAE-encoded reference features into attention layers at spatially aligned target positions, guided by latent-space correspondences estimated directly from user-specified control points. By operating on clean, directly encoded features rather than noisy inversion outputs, CTI preserves rich texture details and enables precise drag control. Second, we propose Position-Aligned Attention (PAA) to eliminate interference caused by spatial displacement of reference features. PAA re-encodes positional embeddings of displaced reference tokens to match their target locations, and masks overlapping regions between source and destination to prevent conflicting features from degrading visual consistency. Experiments on DragBench-SR and DragBench-DR demonstrate that ContextDrag achieves SOTA editing accuracy and overall quality, and comprehensive ablations validate the effectiveness of each proposed component.
+
+![ContextDrag](./imgs/ContextDrag.png)
+</details>
+
+---
+
+
+
+### DynaDrag: Dynamic Drag-Style Image Editing by Motion Prediction
+[![arXiv](https://img.shields.io/badge/arXiv-2601.00542-b31b1b.svg)](https://arxiv.org/abs/2601.00542) 
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](https://arxiv.org/pdf/2601.00542) 
+\
+2026-01-02\
+**Authors:** Jiacheng Sui, Yujie Zhou, Li Niu
+<details span>
+<summary>Abstract</summary>
+To achieve pixel-level image manipulation, drag-style image editing which edits images using points or trajectories as conditions is attracting widespread attention. Most previous methods follow move-and-track framework, in which miss tracking and ambiguous tracking are unavoidable challenging issues. Other methods under different frameworks suffer from various problems like the huge gap between source image and target edited image as well as unreasonable intermediate point which can lead to low editability. To avoid these problems, we propose DynaDrag, the first dragging method under predict-and-move framework. In DynaDrag, Motion Prediction and Motion Supervision are performed iteratively. In each iteration, Motion Prediction first predicts where the handle points should move, and then Motion Supervision drags them accordingly. We also propose to dynamically adjust the valid handle points to further improve the performance. Experiments on face and human datasets showcase the superiority over previous works.
+
+![DynaDrag](./imgs/DynaDrag.png)
+</details>
+
+---
+
+
 
 
 
@@ -657,6 +690,42 @@ Drag-based image editing has emerged as a powerful paradigm for intuitive image 
 </details>
 
 ---
+
+### DirectDrag: High-Fidelity, Mask-Free, Prompt-Free Drag-based Image Editing via Readout-Guided Feature Alignment
+![Publication](https://img.shields.io/badge/2026-WACV-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2512.03981-b31b1b.svg)](https://arxiv.org/abs/2512.03981) 
+[![GitHub stars](https://img.shields.io/github/stars/frakw/DirectDrag?logo=github&label=Stars)](https://github.com/frakw/DirectDrag)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://frakw.github.io/DirectDrag/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](https://arxiv.org/pdf/2512.03981) 
+\
+2025-12-03\
+**Authors:** Sheng-Hao Liao, Shang-Fu Chen, Tai-Ming Huang, Wen-Huang Cheng, Kai-Lung Hua
+<details span>
+<summary>Abstract</summary>
+Drag-based image editing using generative models provides intuitive control over image structures. However, existing methods rely heavily on manually provided masks and textual prompts to preserve semantic fidelity and motion precision. Removing these constraints creates a fundamental trade-off: visual artifacts without masks and poor spatial control without prompts. To address these limitations, we propose DirectDrag, a novel mask- and prompt-free editing framework. DirectDrag enables precise and efficient manipulation with minimal user input while maintaining high image fidelity and accurate point alignment. DirectDrag introduces two key innovations. First, we design an Auto Soft Mask Generation module that intelligently infers editable regions from point displacement, automatically localizing deformation along movement paths while preserving contextual integrity through the generative model's inherent capacity. Second, we develop a Readout-Guided Feature Alignment mechanism that leverages intermediate diffusion activations to maintain structural consistency during point-based edits, substantially improving visual fidelity. Despite operating without manual mask or prompt, DirectDrag achieves superior image quality compared to existing methods while maintaining competitive drag accuracy. Extensive experiments on DragBench and real-world scenarios demonstrate the effectiveness and practicality of DirectDrag for high-quality, interactive image manipulation.
+
+![DirectDrag](./imgs/DirectDrag.png)
+</details>
+
+---
+
+### Dragonite: Single-Step Drag-based Image Editing with Geometric-Semantic Guidance
+![Publication](https://img.shields.io/badge/2026-WACV-43aa8b) 
+[![GitHub stars](https://img.shields.io/github/stars/joseph34961971/Dragonite?logo=github&label=Stars)](https://github.com/joseph34961971/Dragonite)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](https://openaccess.thecvf.com/content/WACV2026/papers/Jhong_Dragonite_Single-Step_Drag-based_Image_Editing_with_Geometric-Semantic_Guidance_WACV_2026_paper.pdf) 
+\
+2026-03-06\
+**Authors:** Meng-Ting Jhong, Tai-Ming Huang, Shang-Fu Chen, Wen-Huang Cheng, Kai-Lung Hua
+<details span>
+<summary>Abstract</summary>
+Recent interactive image editing methods have made notable progress, yet achieving both precise control and real-time performance remains a challenge. Drag-based methods offer detailed geometric manipulations but suffer from low image fidelity and slow runtime performance, while text-based approaches enhance realism but limit precise and pixel-level control. To overcome these limitations, we introduce Dragonite, an intuitive and efficient framework that seamlessly unifies geometric and semantic manipulation for image editing. Dragonite leverages a Dual Guidance Module that fuses geometric deformation vectors with semantic guidance cues into a joint representation space, ensuring precise manipulation of both content and semantics. By combining a single-step latent optimization mechanism with a enhanced interpolation method, Dragonite achieves efficient interactive image editing while maintaining high precision through integrated geometric and semantic guidance. Extensive evaluations on the DragBench benchmark demonstrate that Dragonite effectively resolves the trade-off between speed and accuracy, enabling real-time, high-fidelity image editing.
+
+![Dragonite](./imgs/Dragonite.png)
+</details>
+
+---
+
+
 
 
 
@@ -930,6 +999,23 @@ Diffusion Handles is a novel approach to enabling 3D object edits on diffusion i
 
 ---
 
+### ObjectMorpher: 3D-Aware Image Editing via Deformable 3DGS Models
+![Publication](https://img.shields.io/badge/2026-CVPR-43aa8b) 
+[![arXiv](https://img.shields.io/badge/arXiv-2603.28152-b31b1b.svg)](https://arxiv.org/abs/2603.28152) 
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](https://arxiv.org/pdf/2603.28152) 
+\
+2026-03-30\
+**Authors:** Yuhuan Xie, Aoxuan Pan, Yi-Hua Huang, Chirui Chang, Peng Dai, Xin Yu, Xiaojuan Qi
+<details span>
+<summary>Abstract</summary>
+Achieving precise, object-level control in image editing remains challenging: 2D methods lack 3D awareness and often yield ambiguous or implausible results, while existing 3D-aware approaches rely on heavy optimization or incomplete monocular reconstructions. We present ObjectMorpher, a unified, interactive framework that converts ambiguous 2D edits into geometry-grounded operations. ObjectMorpher lifts target instances with an image-to-3D generator into editable 3D Gaussian Splatting (3DGS), enabling fast, identity-preserving manipulation. Users drag control points; a graph-based non-rigid deformation with as-rigid-as-possible (ARAP) constraints ensures physically sensible shape and pose changes. A composite diffusion module harmonizes lighting, color, and boundaries for seamless reintegration. Across diverse categories, ObjectMorpher delivers fine-grained, photorealistic edits with superior controllability and efficiency, outperforming 2D drag and 3D-aware baselines on KID, LPIPS, SIFID, and user preference.
+
+![ObjectMorpher](./imgs/ObjectMorpher.png)
+</details>
+
+---
+
+
 
 ## 3D Drag Editing for 3D Object
 ### Drag3D: DragGAN meets GET3D
@@ -1058,6 +1144,24 @@ Drag-driven editing has become popular among designers for its ability to modify
 </details>
 
 ---
+
+### DragMesh: Interactive 3D Generation Made Easy
+[![arXiv](https://img.shields.io/badge/arXiv-2512.06424-b31b1b.svg)](https://arxiv.org/abs/2305.10973) 
+[![GitHub stars](https://img.shields.io/github/stars/AIGeeksGroup/DragMesh?logo=github&label=Stars)](https://github.com/AIGeeksGroup/DragMesh)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://aigeeksgroup.github.io/DragMesh/)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](https://arxiv.org/pdf/2512.06424) 
+\
+2025-12-06\
+**Authors:** Tianshan Zhang, Zeyu Zhang, Hao Tang
+<details span>
+<summary>Abstract</summary>
+While generative models have excelled at creating static 3D content, the pursuit of systems that understand how objects move and respond to interactions remains a fundamental challenge. Current methods for articulated motion lie at a crossroads: they are either physically consistent but too slow for real-time use, or generative but violate basic kinematic constraints. We present DragMesh, a robust framework for real-time interactive 3D articulation built around a lightweight motion generation core. Our core contribution is a novel decoupled kinematic reasoning and motion generation framework. First, we infer the latent joint parameters by decoupling semantic intent reasoning (which determines the joint type) from geometric regression (which determines the axis and origin using our Kinematics Prediction Network (KPP-Net)). Second, to leverage the compact, continuous, and singularity-free properties of dual quaternions for representing rigid body motion, we develop a novel Dual Quaternion VAE (DQ-VAE). This DQ-VAE receives these predicted priors, along with the original user drag, to generate a complete, plausible motion trajectory. To ensure strict adherence to kinematics, we inject the joint priors at every layer of the DQ-VAE's non-autoregressive Transformer decoder using FiLM (Feature-wise Linear Modulation) conditioning. This persistent, multi-scale guidance is complemented by a numerically-stable cross-product loss to guarantee axis alignment. This decoupled design allows DragMesh to achieve real-time performance and enables plausible, generative articulation on novel objects without retraining, offering a practical step toward generative 3D intelligence.
+
+![DragMesh](./imgs/DragMesh.png)
+</details>
+
+---
+
 
 
 
@@ -1222,6 +1326,39 @@ Currently, the success of large language models (LLMs) illustrates that a unifie
 </details>
 
 ---
+
+### RealDrag: The First Dragging Benchmark with Real Target Image
+[![arXiv](https://img.shields.io/badge/arXiv-2512.12287-b31b1b.svg)](https://arxiv.org/abs/2512.12287)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](https://arxiv.org/pdf/2512.12287) 
+\
+2025-12-13\
+**Authors:** Ahmad Zafarani, Zahra Dehghanian, Mohammadreza Davoodi, Mohsen Shadroo, MohammadAmin Fazli, Hamid R. Rabiee
+<details span>
+<summary>Abstract</summary>
+The evaluation of drag based image editing models is unreliable due to a lack of standardized benchmarks and metrics. This ambiguity stems from inconsistent evaluation protocols and, critically, the absence of datasets containing ground truth target images, making objective comparisons between competing methods difficult. To address this, we introduce \textbf{RealDrag}, the first comprehensive benchmark for point based image editing that includes paired ground truth target images. Our dataset contains over 400 human annotated samples from diverse video sources, providing source/target images, handle/target points, editable region masks, and descriptive captions for both the image and the editing action.
+We also propose four novel, task specific metrics: Semantical Distance (SeD), Outer Mask Preserving Score (OMPS), Inner Patch Preserving Score (IPPS), and Directional Similarity (DiS). These metrics are designed to quantify pixel level matching fidelity, check preservation of non edited (out of mask) regions, and measure semantic alignment with the desired task. Using this benchmark, we conduct the first large scale systematic analysis of the field, evaluating 17 SOTA models. Our results reveal clear trade offs among current approaches and establish a robust, reproducible baseline to guide future research. Our dataset and evaluation toolkit will be made publicly available.
+
+![RealDrag](./imgs/RealDrag.png)
+</details>
+
+---
+
+
+### Reproducing DragDiffusion: Interactive Point-Based Editing with Diffusion Models
+[![arXiv](https://img.shields.io/badge/arXiv-2602.12393-b31b1b.svg)](https://arxiv.org/abs/2602.12393) 
+[![GitHub stars](https://img.shields.io/github/stars/AliSubhan5341/DragDiffusion-TMLR-Reproducibility-Challenge?logo=github&label=Stars)](https://github.com/AliSubhan5341/DragDiffusion-TMLR-Reproducibility-Challenge)
+[![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](https://arxiv.org/pdf/2602.12393) 
+\
+2026-02-12\
+**Authors:** Ali Subhan, Ashir Raza
+<details span>
+<summary>Abstract</summary>
+DragDiffusion is a diffusion-based method for interactive point-based image editing that enables users to manipulate images by directly dragging selected points. The method claims that accurate spatial control can be achieved by optimizing a single diffusion latent at an intermediate timestep, together with identity-preserving fine-tuning and spatial regularization. This work presents a reproducibility study of DragDiffusion using the authors' released implementation and the DragBench benchmark. We reproduce the main ablation studies on diffusion timestep selection, LoRA-based fine-tuning, mask regularization strength, and UNet feature supervision, and observe close agreement with the qualitative and quantitative trends reported in the original work. At the same time, our experiments show that performance is sensitive to a small number of hyperparameter assumptions, particularly the optimized timestep and the feature level used for motion supervision, while other components admit broader operating ranges. We further evaluate a multi-timestep latent optimization variant and find that it does not improve spatial accuracy while substantially increasing computational cost. Overall, our findings support the central claims of DragDiffusion while clarifying the conditions under which they are reliably reproducible.
+
+</details>
+
+---
+
 
 
 
