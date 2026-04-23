@@ -1069,6 +1069,7 @@ Trajectory-based motion control has emerged as an intuitive and efficient approa
 ![Publication](https://img.shields.io/badge/2025-CVPR-43aa8b) 
 [![arXiv](https://img.shields.io/badge/arXiv-2503.16068-b31b1b.svg)](https://arxiv.org/abs/2503.16068) 
 [![GitHub stars](https://img.shields.io/github/stars/robingg1/PoseTraj?logo=github&label=Stars)](https://github.com/robingg1/PoseTraj)
+[![Webpage](https://img.shields.io/badge/Project-Page-3cba54?style=flat&logo=Google%20chrome&logoColor=white)](https://robingg1.github.io/Pose-Traj/)
 [![PDF](https://img.shields.io/badge/PDF-File-4287f5.svg)](./papers/PoseTraj.pdf) 
 \
 2025-03-20\
